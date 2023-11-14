@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+Exception: Screen preferences is not known.
+
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "D:\APK FILES\renpy-8.1.1-sdk\renpy-8.1.1-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\APK FILES\renpy-8.1.1-sdk\renpy-8.1.1-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 33, in _execute_python_hide
+    renpy.show_screen(name, *args, **kwargs)
+  File "D:\APK FILES\renpy-8.1.1-sdk\renpy-8.1.1-sdk\renpy\display\screen.py", line 1220, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen preferences is not known.
+
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.1.1.23060707
+ 1.0
+Tue Nov 14 15:52:02 2023

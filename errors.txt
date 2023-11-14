@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 38: end of line expected.
+    show extra normal at right stefan_restface
+                               ^
+
+Ren'Py Version: Ren'Py 8.1.1.23060707
+Fri Oct 27 08:45:55 2023
