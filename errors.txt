@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 38: end of line expected.
-    show extra normal at right stefan_restface
-                               ^
+File "game/script.rpy", line 45: expected statement.
+    zoom 0.5
+          ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Fri Oct 27 08:45:55 2023
+Sat Nov 18 19:11:27 2023
