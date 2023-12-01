@@ -57,10 +57,11 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+#define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "fonts/BRCandor-SemiBold.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "fonts/Gagalin-Regular.otf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "fonts/Gagalin-Regular.otf"
@@ -87,7 +88,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = Movie(play="gui/awal2.ogv", Loop=True, size=(1920, 1080))
+define gui.game_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -260,7 +262,8 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 12
+define gui.navigation_spacing = 15
+define gui.hnavigation_spacing = 50
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 15
