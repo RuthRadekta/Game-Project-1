@@ -33,16 +33,16 @@ label splashscreen:
     return
 
 label start:
-    centered "(Bel pulang sekolah berbunyi)"
+    centered "{color=#FFFFFF}(Bel pulang sekolah berbunyi){/color}"
     #play suara bel
 
 label scene1:
     scene fadein 0.5
     scene ruangkelas_now
     #play suara riuh di kelas
-    centered "(Suara riuh di kelas)"
-    centered '"Eh kata Pak Retno ulangan sejarah kapan?"'
-    centered '"Besok banget tuh"'
+    centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
+    centered '{color=#FFF5C2}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
+    centered '{color=#FFF5C2}"Besok banget tuh"{/color}'
     show kusuma_suprisedface at left
     Suma "Huh?"
     Suma "(Menghela napas)"
@@ -56,19 +56,21 @@ label scene2:
     extend "Ribet banget..."
     Suma "Mana pake ulangan segala lagi. "
     extend "Dikira mapel yang harus dipikir ini doang? "
-    scene fadeout 0.5
+    scene fadeout 1.5
 
 label scene3:
     scene kamar suma 
     with fade
+    centered "{color=#FFFFFF}(Sesampainya di rumah...){/color}"
     show kusuma_restface at left
     Suma "Ngantuk... "
     hide kusuma_restFace
     extend "Pen tidur..."
-    scene fadeout 0.5
+    scene fadeout 3.5
 
 label scene4:
     scene kamar lama
+    with fade
     show torasumaji_restFace at left
     Suma "Loh? "
     extend "(Melihat sekitar) "
@@ -131,6 +133,9 @@ label scene5:
     Mbah "(Berhenti tertawa)"
     Mbah "Yowes, tetep kerjo. Ayo!"
     scene fadeout 0.5
+
+label scene6:
+    
 
 label bgm:
     #play music "audio/suma_theme.mp3" fadein 1.0 volume 10
