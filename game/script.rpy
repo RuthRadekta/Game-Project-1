@@ -75,7 +75,7 @@ label scene4:
     Suma "Loh? "
     extend "(Melihat sekitar) "
     extend "Kamar siapa ini? "
-    centered "Le, ijek durung tangi to? "
+    centered '"Le, ijek durung tangi to?"'
     hide normal
     show kaget at left
     Suma "(Mendengar sesuatu) "
@@ -100,9 +100,10 @@ label scene4:
 
 label scene5:
     hide kaget
-    centered "entar nunjukin sekeliling rumah, kira-kira 4 gambar"
+    # nunjukin sekeliling rumah
+    centered "(EDIT)entar nunjukin sekeliling rumah, kira-kira 4 gambar"
     centered "(Suma sampai halaman depan)"
-    centered "entar nunjukin mbah seno yg berdiri dengan caping kepala dan bbrp peralatan berkebun"
+    centered "(EDIT)entar nunjukin mbah seno yg berdiri dengan caping kepala dan bbrp peralatan berkebun"
     Mbah "Ayo! Gek ndang mangkat!"
     show kaget at left
     Suma "M-mau kemana mbah?"
@@ -136,8 +137,8 @@ label scene5:
     scene fadeout 0.5
 
 label scene6:
-    centered "entar nampilin hamparan sawah hijau yang membentang"
-    centered "terus nampilin petani yang lagi bekerja di sawah"    
+    centered "(EDIT)entar nampilin hamparan sawah hijau yang membentang"
+    centered "(EDIT)terus nampilin petani yang lagi bekerja di sawah"    
     show normal at left
     Suma "Mbah, apa yang harus aku lakukan di sini?"
     hide normal
@@ -149,8 +150,8 @@ label scene6:
     extend " Saiki, yoh mulai garap."
     show normal at left
     Suma "(Sedikit ragu, tetapi dia tetap mencoba beradaptasi dengan situasi yang dihadapi.)"
-    centered "Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda."
-    centered "Suma mendengarkan dengan penuh perhatian"
+    centered "(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda)"
+    centered "(Suma mendengarkan dengan penuh perhatian)"
     hide normal
 
     # sesi kuis
@@ -176,8 +177,8 @@ label scene6:
         jump scene7
 
 label scene7:
-    centered "Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno."
-    centered "Selain itu, mereka mulai akrab layaknya keluarga."
+    centered "(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno)"
+    centered "(Selain itu, mereka mulai akrab layaknya keluarga)"
     Mbah "Bagus, le. Kau telah belajar banyak hari ini."
     Mbah "Ini adalah langkah awal dalam perjalananmu untuk memahami sejarah dan budaya kita. "
     extend "Ingatlah, kita harus menghargai warisan nenek moyang kita dan belajar dari mereka."
@@ -190,7 +191,7 @@ label scene7:
     extend "Tapi sepertinya aku bakal betah di sini"
     Mbah "(Tersenyum kembali)" 
     Mbah "Yowes, le. Ayo bali. Kita masih punya banyak yang harus kau pelajari."  
-    centered "Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini."
+    centered "(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini)"
     scene fadeout 0.5
     Suma "Siapa tuh, mbah?"
     extend "(tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
@@ -231,7 +232,6 @@ label scene7:
     
     label paham:
         Mbah "Mantap!"
-        extend "Cucuku pinter tenan jebule"
         jump scene8
 
     label gakpaham:
@@ -251,9 +251,9 @@ label scene7:
 label scene8:
     Mbah "Sudah pernah lihat lukisannya yang di gambar Raden Saleh belum?"
     Suma "Belummm"
-    centered "Lalu mbah Seno pergi ke dalam dan mengambil gambaran kecil."
-    centered "Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma."
-    centered "Walaupun hanya duplikat, tapi masih tetap mirip."
+    centered "(Lalu mbah Seno pergi ke dalam dan mengambil gambaran kecil)"
+    centered "(Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma)"
+    centered "(Walaupun hanya duplikat, tapi masih tetap mirip)"
 
     #nah ini nunjukin gambarnya raden saleh
 
@@ -264,6 +264,66 @@ label scene9:
     centered "Dikarenakan penasaran, dia mengambil buku tersebut dan membacanya."
     
     #nampilin bersatu kita teguh...
+
+    Mbah "Moco gak izin sek. "
+    extend "Kene"
+    Suma "(Tertawa gugup)"
+    extend "Hehe maaf, mbah. Sengaja."
+    Mbah "Hm"
+    Suma "Tapi mbah..."
+    Mbah "Opo neh?"
+    Suma "Itu karangan siapa?"
+    Mbah "Oh, iki seko Nak Yamin. Iki diterbitne-"
+    Suma "Mbahhh pake Bahasa Indonesia, dong. Ga paham akuuu"
+    Mbah "Heleh. "
+    extend "Gak tau nganggo boso kromo sih."
+    Mbah "Ini sajak yang dibuat Muhammad Yamin, "
+    extend "diterbitkan di Pasudan tanggal 26 Oktober 1928."
+    Suma "26 Oktober 1928?!"
+    extend "Sebelum Kongres Sumpah Pemuda II dong, mbah?"
+    Mbah "Hiyo. Kok koe reti le?"
+    Suma "Hehe ngerti dong, mbah"
+    Mbah "Ndang cobo, kapan kui Kongres Pemudane?"
+    menu:
+        "benar":
+            jump lanjut
+        "salah":
+            jump lanjut
+    
+    label lanjut:
+        Mbah "Opo hasile?"
+        menu:
+            "benar":
+                jump benar
+            "salah":
+                jump salah
+    
+    label benar:
+        Mbah "Cucuku pinter tenan jebule"
+        jump scene10
+    
+    label salah:
+        Mbah "Heleh, jare ngerti?"
+        jump scene10
+
+
+label scene10:
+    centered "(Setelah itu, Suma berpamitan untuk pergi ke sekolah karena ia mau tidak mau harus tetap pergi ke sekolah di zaman ini, walaupun harus tetap berpura-pura menjadi kakeknya)"
+    
+    # nanti muncul info ndek tengah
+    # Kakeknya ini ternyata seorang yang ramah dan pekerja keras, berbanding balik dengan dirinya. Dia juga popular di kalangan sekolah dan sekitar karena kecerdasannya, selain itu dia adalah seorang ketua salah satu organisasi tersembunyi di sekolah yang ikut memperjuangkan kemerdekaan.  
+
+    Suma "(Melihat sekitar) "
+    extend "kok bule semua ya? cowo semua lagi (batinnya)"
+
+    centered "..."
+
+    Suma "(Duduk di bangkunya)"
+
+    # Pertemuan dengan Stefan
+    centered '"Hey!"'
+
+    Suma "(Merasa bahunya ditepuk)"
 
 
 
