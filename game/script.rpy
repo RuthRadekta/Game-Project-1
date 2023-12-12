@@ -399,6 +399,68 @@ label scene12:
 
     centered "(Selama proses belajar, Suma mulai merasa bahwa Stefan tidak begitu buruk seperti yang dia kira awalnya. Dia melihat kegigihan Stefan untuk memahami pelajaran matematika dan bagaimana dia mencoba keras untuk belajar, meskipun bahasanya bukan bahasa ibunya. Mereka mulai berbicara tentang hal-hal lain di luar pelajaran, dan akhirnya, mereka mulai berbagi cerita tentang kehidupan mereka masing-masing di masa kini)"
 
+    Suma "“Stef, kok bisa sih lu berpihak ke Indonesia?”"
+    Stefan "(Menatap Suma bingung)"
+    extend "“Maksudnya?”"
+    Suma "(Menepuk dahi. Lagi-lagi lupa jika ia sedang melintas zaman)"
+    Suma "“Maksudnya, kenapa kau bisa berpihak ke Indonesia? Padahal kau bukan pribumi.”"
+    Stefan "(Tersenyum)"
+    extend " “Aku suka di sini daripada Netherland! Papa mama juga…” "
+    extend "(ucapnya menggebu-gebu.)"
+    Suma "“...Kenapa?” "
+    Stefan "“Aku suka kue putu!”"
+
+    centered "(Suma tidak habis pikir. Menurutnya itu alasan yang konyol. Tapi, ya sudahlah. Selama dia bersikap baik, maka ia juga akan bersikap baik.)"
+
+    centered "(Kemudian Stefan menceritakan tentang keluarganya, ayahnya yang bekerja sebagai pegawai pemerintah Belanda dan menikah dengan ibunya yang merupakan seornag wanita cantik dari Indonesia. Dia juga mengungkapkan bahwa dia adalah anggota keluarga yang beruntung karena bisa mendapatkan pendidikan yang baik. Namun, dia juga merasa dilema karena mengetahui ketidakadilan yang terjadi di bawah pemerintahan Belanda di Indonesia.)"
+
+    centered "(Suma yang awalnya curiga, menjadi merasa simpati mendengar cerita Stefan, dan dia mulai melihatnya sebagai individu yang terpisah dari pemerintah Belanda yang menjadi penjajah. Mereka mulai berbicara tentang impian mereka masing-masing dan harapan untuk masa depan.)"
+
+    centered "(Saat mereka berbicara, orang tua Stefan, yaitu Nyonya Driessen dan Tuan Driessen, masuk ke dalam ruang keluarga. Mereka adalah orang Belanda yang tinggal di Indonesia, dan mereka terlihat ramah kepada Suma. Meskipun ada bahasa dan budaya yang berbeda, mereka mencoba berkomunikasi dengan Suma dan mengenalkan diri mereka.)"
+
+    centered "(Sejak saat itu, Suma dan Stefan mulai akrab satu sama lain.)"
+
+label scene13:
+    centered "(Suatu hari, saat Suma selesai mengajari Stefan Pelajaran matematika seperti biasa, ia mendengar suara orang mengobrol dari arah pintu masuk. Kemudian, pintu terbuka dan mengungkapkan suasana hangat dari sebuah rumah dengan perabotan kayu jati klasik. Suara tawa dan percakapan penuh semangat mengisi ruangan.)"
+
+    centered "(Hari ini adalah hari di mana Tuan Driessen menjadi tuan rumah dalam pertemuan untuk berdiskusi tentang perjuangan kemerdekaan. Suma dan Stefan bersemangat karena Ayah Stefan bilang Soekarno dan tokoh-tokoh pejuang kemerdekaan lainnya akan datang.)"
+
+    Suma "(“What?! Soekarno??!” Terkejut setengah mati)"
+    Suma "“Apa kau tahu Pak Soekarno itu siapa?”"
+    extend "(berapi-api)"
+    Stefan "“Siapa?”"
+    Suma "(Dia memang bodoh atau pura-pura bodoh?)"
+    Suma "“Beliau sering ke sini ‘kan?”"
+    show stefan_giggleFace at left
+    Stefan "(Tersenyum)"
+    extend " “Tidak ingat.”"
+    hide stefan_giggleFace
+    Suma "(“Remaja jompo ada di mana-mana ya...”)"
+
+    centered "(Acara itupun segera dimulai. Soekarno, duduk di tengah-tengah, dengan gagah dan penuh wibawa memimpin diskusi. Dia dengan bersemangat menjelaskan visi dan hasrat mereka untuk membebaskan Indonesia dari cengkraman penjajah.)"
+
+    centered "(Audiens mendapatkan petuah dari Soekarno, seperti awal mula terbentuknya sifat nasionalisme pemuda dan bagaimana Indonesia saat ini melalui sudut pandang Soekarno. Suma duduk dengan penuh keterpesonaan di samping Stefan. Dia memperhatikan dengan cermat setiap kata yang diucapkan oleh Soekarno.)"
+
+    Suma "(“Ternyata disaksikan secara langsung public speaking Pak Soekarno keren juga....”)"
+
+    centered "(Sesaat kemudian seseorang datang menyusul ke ruangan ini. Itu adalah seorang pemikir intelektual yang maju untuk mengungkap gagasannya. Beliau membahas gagasannya tentang bentuk pemerintahan yang akan datang setelah merdeka.)"
+
+    Suma "(menyadari sesuatu)"
+    extend "“Itu Mohammad Hatta!”"
+    Stefan "“Kenapa?”"
+    Suma "Kok kenapa? Itu Mohammad Hatta!!”"
+    Stefan "“Iya lalu?”"
+    Suma "(menepuk dahi)"
+    extend "(“Ah tuhkan aku lupa lagi”)"
+
+    centered "(Setelah Hatta, anggota-anggota pertemuan itu juga menyampaikan pandangan dan ide masing-masing. Mereka membahas rencana untuk membangun bangsa yang merdeka, berdaulat, dan adil. Diskusi itu memancarkan semangat persatuan dan tekad untuk mencapai tujuan bersama.)"
+
+    Suma "(memerhatikan diskusi dengan seksama)"
+    extend " (“Menyaksikan pahlawan-pahlawan ini secara langsung ternyata seru juga.” batin Suma)"
+
+    centered "(Lalu setelah diskusi yang panjang itu selesai dan makanan dihidangkan, Tuan Driessen memperkenalkan Suma dan Stefan kepada orang-orang di dalam ruangan. Tuan Driessen memperkenalkan Stefan sebagai anaknya dan Suma sebagai teman anaknya.)"
+
+    #end dari chapter 2
 
 
 
