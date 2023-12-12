@@ -246,7 +246,7 @@ label scene7:
         Mbah "Perlawanan Diponegoro semakin melemah setelah beberapa pemimpinnya ditangkap. Pada akhirnya, Diponegoro ditangkap pada hari Idulfitri tahun 1830 dan diasingkan ke Manado, lalu Makassar, hingga meninggal di Benteng Rotterdam pada tahun 1855. "
         Mbah "Dah paham?"
         Suma "(Mengangguk) Yup!"
-        jump scene8:
+        jump scene8
 
 label scene8:
     Mbah "Sudah pernah lihat lukisannya yang di gambar Raden Saleh belum?"
@@ -324,6 +324,82 @@ label scene10:
     centered '"Hey!"'
 
     Suma "(Merasa bahunya ditepuk)"
+    extend "(menoleh)"
+    show torasumaji_suprisedFace at left
+    Suma "Eh penjajah?!?"
+    hide torasumaji_suprisedFace
+
+    show stefan_restFace at left
+    Stefan "“Ada apa?”"
+    hide stefan_restFace
+
+    show torasumaji_restFace at left
+    Suma "(...)"
+
+    centered "Karena Suma masih berusaha untuk tidak berurusan dengan hal-hal aneh di sini, akhirnya dia hanya diam dan mengobservasi laki-laki itu dengan tatapan dingin."
+    hide torasumaji_restFace
+
+    show stefan_giggleFace at left
+    Stefan "“Aku hanya minta tolong kau ajarkan math ini. Bisa?”"
+    extend " (tanyanya dengan aksen Belanda yang masih kental.)"
+    hide stefan_giggleFace
+
+    Suma "“Hah?” (Bingung)"
+    Stefan "“Hah??” (Ikut bingung)"
+    Suma "(Menunjuk dirinya sendiri, dan menoleh kanan kiri untuk memastikan jika dirinya betulan yang dimintai tolong)"
+    Stefan "“Iya! Karena kau pintar,”"
+    Suma "(berdeham dan merasa percaya diri.)"
+    extend " “… Gak mau,” (ucapnya gengsi)"
+    Stefan "“Come on! Kau bisa mengajar pada semua. Tapi, aku tidak, kenapa??”"
+    Suma "(mendesah kesal karena ia hampir saja lupa bahwa dia berada dalam tubuh kakeknya yang ramah)"
+    extend " “Gue bahkan ga kenal lo. Sokap banget,”"
+    centered "(Suma melirik ke arah lain. Dia tahu bahwa orang Belanda itu tidak mengerti ejekkannya, jadi dia bisa bebas menggunakan kosakata gaul di zamannya.)"
+    Stefan "“Maksudmu?”"
+    extend "(menatap bingung)"
+    Suma "“Aku tidak mengenalmu, ‘kay? Do you understand?”"
+    Stefan "“Aneh sekali kau tidak tahu aku, teman sekelas,"
+    extend " Aku Stefan. Stefan Driessen,”"
+    Suma "“Stefan?”"
+    Stefan "(mengangguk beberapa kali dan mengacungkan jempol.)"
+    Suma "“Tapi, ini tidak gratis,” (bersedekap)"
+    Stefan "(mengangguk)"
+    extend "“Ya, aku akan membayar.”"
+    Suma "(“Uang? Mungkin ini gak begitu buruk.” batinnya)"
+
+
+label scene11:
+    centered "(Sebelum pulang sekolah, Suma sedang melihat-lihat sekitar di kelas ini karena rasa kagumnya belum sirna. Salah satu benda yang menarik perhatiannya adalah sebuah pajangan kata-kata yang berfigurakan kayu.)"
+
+    centered "Ing ngarsa sung tuladha. Ing madya mangun Karsa. Tut wuri handayani.  ~ Ki Hadjar Dewantara"
+
+    Suma "(membaca kata-kata tersebut)"
+    extend " “Hah?”"
+    Stefan "“Hah?”"
+    extend " (menoleh dari samping Suma)"
+    Suma "(menatap Stefan)" 
+    extend "“Itu… pajangan itu didapat darimana?”"
+    Stefan "“Oh! Benda itu dibuat oleh salah satu guru."
+    extend "Katanya dia suka dan terkesan dengan semboyan Ki Hadjar Dewantara.”"
+    Suma "“Kenapa? Emang artinya apa?”"
+    Stefan "“Ing Ngarso Sung Tulodo artinya nmenjadi seorang pemimpin harus mampu memberikan suri tauladan."
+    extend "Ing Madyo Mbangun Karso, artinya seseorang ditengah kesibukannya harus juga mampu membangkitkan atau menggugah semangat."
+    extend "Tut wuri handayani, artinya di belakang bisa memberi dorongan”"
+    Suma "“Kok kamu tahu?”"
+    Stefan "“Guru itu yang mengartikannya untukku,”"
+    extend "(menjawab dengan bangga.)"
+    Suma "“Oh. Ya sudah. Thanks,”"
+
+    centered "(Suma mulai berjalan dari kelas untuk pulang dan diikuti oleh Stefan.)"
+
+
+label scene12:
+    centered "(Saat ini mereka berada di rumah Stefan pada sore hari karena Suma sudah setuju untuk membantu Stefan dengan Pelajaran matematika. Rumah itu terletak di dekat sekolah, tetapi Suma merasa tidak familiar dengan bangunan tua ini, yang jauh berbeda dari rumah-rumah modern yang dia kenal.)"
+
+    centered "(Stefan membawa buku matematika yang tebal, dan mereka duduk di meja belajar di ruang keluarga. Suma mulai menjelaskan pelajaran matematika dengan tekun, sementara Stefan dengan penuh semangat mencoba mengerti dan mengikuti penjelasan Suma. Meskipun ada perbedaan bahasa dan budaya di antara mereka, mereka akhirnya mulai bekerja sama dengan baik.)"
+
+    centered "(Selama proses belajar, Suma mulai merasa bahwa Stefan tidak begitu buruk seperti yang dia kira awalnya. Dia melihat kegigihan Stefan untuk memahami pelajaran matematika dan bagaimana dia mencoba keras untuk belajar, meskipun bahasanya bukan bahasa ibunya. Mereka mulai berbicara tentang hal-hal lain di luar pelajaran, dan akhirnya, mereka mulai berbagi cerita tentang kehidupan mereka masing-masing di masa kini)"
+
+
 
 
 
