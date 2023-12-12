@@ -8,6 +8,11 @@ define Suma = Character('Suma', color="#508D69")
 define Stefan = Character('Stefan', color="#F3B664")
 define Mbah = Character('Mbah', color="#872341")
 define Kakek = Character('Kakek')
+
+define Soekarno = Character('Soekarno', color="#0d1a73")
+define Hatta = Character('Hatta', color="#373e6e")
+define Radio = Character ('<radio>', color="#030303")
+
 #image opening = "..."
 
 #define sm = Character("Suma", image = "suma")
@@ -31,6 +36,12 @@ label splashscreen:
     scene fadeout white 0.5
 
     return
+
+#################################################
+
+default nilai = 0
+
+#################################################
 
 label start:
     centered "{color=#FFFFFF}(Bel pulang sekolah berbunyi){/color}"
@@ -154,8 +165,6 @@ label scene6:
     centered "(Suma mendengarkan dengan penuh perhatian)"
     hide normal
 
-    # sesi kuis
-    # pertanyaan nih
     Mbah "Pie, Le? Wes paham?"
     menu:
         "Udah, mbah" :
@@ -196,7 +205,7 @@ label scene7:
     Suma "Siapa tuh, mbah?"
     extend "(tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
     Mbah "Oh.. jenenge Sutan Syahrir. "
-    extend "Tapi biasane aku nyeluk ‘Si Kancil’ "
+    extend "Tapi biasane aku nyeluk 'Si Kancil' "
     Suma "... (gak paham bahasa jawa)"
     Mbah "(Tertawa melihat wajah bingung Suma)"
     Mbah "Maksudnya, nama orang itu Sutan Syahrir. Tapi mbah biasanya manggil ‘Si Kancil’, paham?"
@@ -255,11 +264,82 @@ label scene8:
     centered "(Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma)"
     centered "(Walaupun hanya duplikat, tapi masih tetap mirip)"
 
-    #nah ini nunjukin gambarnya raden saleh
+    # nah ini nunjukin gambarnya raden saleh
 
-    #setelah itu kuis
+    # setelah itu kuis
+    label pertanyaanCH1_1:
+        centered "Pertanyaan!"
+        "Konferensi apa yang didatangi sekaligus dipimpin oleh Sutan Syahrir?"
+        menu:
+            "Konferensi Meja Bundar":
+                jump pertanyaanCH1_2
+            "Konferensi Rijswijk 1939":
+                $ nilai += 5
+                jump pertanyaanCH1_2
+            "Konferensi Hindia Belanda":
+                jump pertanyaanCH1_2
+            "Koferensi Rijswijk 1940":
+                jump pertanyaanCH1_2
+    
+    label pertanyaanCH1_2:
+        "Apa tujuan konferensi itu diadakan?"
+        menu:
+            "Membahas masalah dan perselisihan antara pemerintah kolonial Belanda dan para pemimpin Indonesia":
+                $ nilai += 5
+                jump pertanyaanCH1_3
+            "Memundurkan Belanda dari Indonesia":
+                jump pertanyaanCH1_3
+            "Memperoleh kemerdekaan Indonesia dari tangan Belanda":
+                jump pertanyaanCH1_3
+            "Demo untuk kesejahteraan Indonesia":
+                jump pertanyaanCH1_3
+    
+    label pertanyaanCH1_3:
+        "Pangeran Diponegoro merupakan pemimpin Perang Diponegoro. Kapan dan dimana perang itu terjadi?"
+        menu:
+            "Sumatra, tahun 1825-1830":
+                jump pertanyaanCH1_4
+            "Jawa, tahun 1825-1830":
+                $ nilai += 5
+                jump pertanyaanCH1_4
+            "Jawa, tahun 1826-1830":
+                jump pertanyaanCH1_4
+            "Sumatra, tahun 1826-1830":
+                jump pertanyaanCH1_4
+    
+    label pertanyaanCH1_4:
+        "Siasat yang digunakan Belanda untuk melawan Pangeran Diponegoro adalah siasat Benteng Stelsel. Apa tujuan siasat itu?"
+        menu:
+            "Melancarkan hubungan Belanda dengan Pasukan Diponegoro":
+                jump pertanyaanCH1_5
+            "Mencegah masuknya bantuan untuk pasukan Belanda":
+                jump pertanyaanCH1_5
+            "Memperkuat pasukan Belanda":
+                jump pertanyaanCH1_5
+            "Mempersempit ruang gerak pasukan Diponegoro. Adapun tempat persembunyian utamanya adalah Goa Selarong":
+                $ nilai += 5
+                jump pertanyaanCH1_5
+
+    label pertanyaanCH1_5:
+        "Belanda berhasil menguasai Indonesia yang kaya akan rempah-rempah, hal ini membuat Belanda dapat mengatur perdagangan Indonesia untuk memperkayakan dirinya sendiri. Inilah yang disebut Merkantilisme. Jadi, Merkantilisme adalah?"
+        menu:
+            "Paham sosial yang menekankan bahwa siapa yang kaya, ialah yang berkuasa":
+                jump scene9
+            "Paham perekonomian yang menganut bahwa keberhasilan suatu negara ditentukan oleh banyaknya modal atau aset yang dimiliki oleh negara":
+                $ nilai += 5
+                jump scene9
+            "Paham perekonomian yang menyatakan bahwa keberhasilan suatu negara didasarkan pada kemajuan teknologi yang ada di negara tersebut":
+                jump scene9
+            "Paham perekonomian tentang untung dan rugi":
+                jump scene9
+
+
+
+############ CHAPTER 02 ####################
 
 label scene9:
+    "Hasil akhir: [nilai] poin"
+    centered "Next!"
     centered "Keesokkan harinya, Suma sedang berjalan di ruang tengah dan tidak sengaja menemukan sebuah buku terbuka yang tidak terlalu tebal."
     centered "Dikarenakan penasaran, dia mengambil buku tersebut dan membacanya."
     
@@ -283,29 +363,38 @@ label scene9:
     extend "Sebelum Kongres Sumpah Pemuda II dong, mbah?"
     Mbah "Hiyo. Kok koe reti le?"
     Suma "Hehe ngerti dong, mbah"
-    Mbah "Ndang cobo, kapan kui Kongres Pemudane?"
-    menu:
-        "benar":
-            jump lanjut
-        "salah":
-            jump lanjut
+
+    # Pertanyaan 6
+    Mbah "Ndang cobo, kapan kui Kongres Pemuda II?"
+    label pertanyaanCH2_1:
+        menu:
+            "28 Oktober 1928":
+                $ nilai += 5
+                jump pertanyaanCH2_2
+            "26 Oktober 1928":
+                jump pertanyaanCH2_2
+            "28 Oktober 1929":
+                jump pertanyaanCH2_2
+            "26 Oktober 1929":
+                jump pertanyaanCH2_2
     
-    label lanjut:
+    # Pertanyaan 7
+    label pertanyaanCH2_2:
         Mbah "Opo hasile?"
         menu:
-            "benar":
-                jump benar
-            "salah":
-                jump salah
+            "Kami putra dan putri Indonesia, mengaku bertumpah darah yang satu, tanah Indonesia. Kami putra dan putri Indonesia, mengaku berbangsa yang satu, bangsa Indonesia.":
+                $ nilai += 5
+                jump benar7
+            "Kami putra dan putri Indonesia, mengaku bertumpah darah yang satu, bangsa Indonesia. Kami putra dan putri Indonesia, mengaku berbangsa yang satu, tanah Indonesia.":
+                jump salah7
     
-    label benar:
+    label benar7:
         Mbah "Cucuku pinter tenan jebule"
         jump scene10
     
-    label salah:
+    label salah7:
         Mbah "Heleh, jare ngerti?"
         jump scene10
-
 
 label scene10:
     centered "(Setelah itu, Suma berpamitan untuk pergi ke sekolah karena ia mau tidak mau harus tetap pergi ke sekolah di zaman ini, walaupun harus tetap berpura-pura menjadi kakeknya)"
@@ -323,149 +412,207 @@ label scene10:
     # Pertemuan dengan Stefan
     centered '"Hey!"'
 
-    Suma "(Merasa bahunya ditepuk)"
-    extend "(menoleh)"
+    Suma "(Kaget, karena bahunya ditepuk)"
     show torasumaji_suprisedFace at left
     Suma "Eh penjajah?!?"
     hide torasumaji_suprisedFace
-
     show stefan_restFace at left
-    Stefan "“Ada apa?”"
+    Stefan "Ada apa?"
     hide stefan_restFace
-
     show torasumaji_restFace at left
-    Suma "(...)"
-
-    centered "Karena Suma masih berusaha untuk tidak berurusan dengan hal-hal aneh di sini, akhirnya dia hanya diam dan mengobservasi laki-laki itu dengan tatapan dingin."
+    Suma "..."
     hide torasumaji_restFace
-
     show stefan_giggleFace at left
-    Stefan "“Aku hanya minta tolong kau ajarkan math ini. Bisa?”"
-    extend " (tanyanya dengan aksen Belanda yang masih kental.)"
+    Stefan "Aku hanya minta tolong kau ajarkan math ini. Bisa?"
+    extend " (bertanya dengan aksen Belanda yang masih kental)"
     hide stefan_giggleFace
-
-    Suma "“Hah?” (Bingung)"
-    Stefan "“Hah??” (Ikut bingung)"
-    Suma "(Menunjuk dirinya sendiri, dan menoleh kanan kiri untuk memastikan jika dirinya betulan yang dimintai tolong)"
-    Stefan "“Iya! Karena kau pintar,”"
-    Suma "(berdeham dan merasa percaya diri.)"
-    extend " “… Gak mau,” (ucapnya gengsi)"
-    Stefan "“Come on! Kau bisa mengajar pada semua. Tapi, aku tidak, kenapa??”"
-    Suma "(mendesah kesal karena ia hampir saja lupa bahwa dia berada dalam tubuh kakeknya yang ramah)"
-    extend " “Gue bahkan ga kenal lo. Sokap banget,”"
+    Suma "Hah?"
+    Stefan "Hah??"
+    Suma "(Menunjuk dirinya sendiri)"
+    Stefan "Iya! "
+    extends "Karena kau pintar."
+    Suma "Tumben ada yang minta ajar ke gue (batinnya)"
+    Suma "(Berdeham)"
+    extend "Gak mau (gengsi)"
+    Stefan "Come on!"
+    extend " Kau bisa mengajar pada semua. Tapi, aku tidak, kenapa?"
+    Suma "(Mendesah kesal karena ia hampir saja lupa bahwa dia berada dalam tubuh kakeknya yang ramah)"
+    Suma "Gue bahkan ga kenal lo. Sokap banget."
     centered "(Suma melirik ke arah lain. Dia tahu bahwa orang Belanda itu tidak mengerti ejekkannya, jadi dia bisa bebas menggunakan kosakata gaul di zamannya.)"
-    Stefan "“Maksudmu?”"
+    Stefan "Maksudmu?"
     extend "(menatap bingung)"
-    Suma "“Aku tidak mengenalmu, ‘kay? Do you understand?”"
-    Stefan "“Aneh sekali kau tidak tahu aku, teman sekelas,"
-    extend " Aku Stefan. Stefan Driessen,”"
-    Suma "“Stefan?”"
-    Stefan "(mengangguk beberapa kali dan mengacungkan jempol.)"
-    Suma "“Tapi, ini tidak gratis,” (bersedekap)"
-    Stefan "(mengangguk)"
-    extend "“Ya, aku akan membayar.”"
-    Suma "(“Uang? Mungkin ini gak begitu buruk.” batinnya)"
-
+    Suma "Aku tidak mengenalmu, ‘kay? Do you understand?"
+    Stefan "Aneh sekali kau tidak tahu aku, teman sekelas,"
+    extend " Aku Stefan. Stefan Driessen"
+    Suma "Stefan?"
+    Stefan "(Mengangguk beberapa kali dan mengacungkan jempol.)"
+    Suma "Tapi... "
+    extend "ini tidak gratis"
+    Stefan "(Mengangguk)"
+    extend "Ya, aku akan membayar"
+    Suma "Uang? Mungkin ini gak begitu buruk (batinnya)"
 
 label scene11:
-    centered "(Sebelum pulang sekolah, Suma sedang melihat-lihat sekitar di kelas ini karena rasa kagumnya belum sirna. Salah satu benda yang menarik perhatiannya adalah sebuah pajangan kata-kata yang berfigurakan kayu.)"
+    centered "(Sebelum pulang sekolah, Suma sedang melihat-lihat sekitar di kelas ini karena rasa kagumnya belum sirna)"
+    centered "Salah satu benda yang menarik perhatiannya adalah sebuah pajangan kata-kata yang berfigurakan kayu"
 
-    centered "Ing ngarsa sung tuladha. Ing madya mangun Karsa. Tut wuri handayani.  ~ Ki Hadjar Dewantara"
+    # nampilin pajangan itu
 
-    Suma "(membaca kata-kata tersebut)"
-    extend " “Hah?”"
-    Stefan "“Hah?”"
-    extend " (menoleh dari samping Suma)"
-    Suma "(menatap Stefan)" 
-    extend "“Itu… pajangan itu didapat darimana?”"
-    Stefan "“Oh! Benda itu dibuat oleh salah satu guru."
-    extend "Katanya dia suka dan terkesan dengan semboyan Ki Hadjar Dewantara.”"
-    Suma "“Kenapa? Emang artinya apa?”"
-    Stefan "“Ing Ngarso Sung Tulodo artinya nmenjadi seorang pemimpin harus mampu memberikan suri tauladan."
+    Suma "(Memahami kata-kata tersebut)"
+    extend "Hah?"
+    Stefan "Hah??"
+    extend " (Menoleh dari samping Suma)"
+    Suma "(Menatap Stefan)" 
+    extend "Itu... pajangan itu didapat darimana?"
+    Stefan "Oh! Benda itu dibuat oleh salah satu guru."
+    extend "Katanya dia suka dan terkesan dengan semboyan Ki Hadjar Dewantara."
+    Suma "Kenapa? Emang artinya apa?"
+    Stefan "Ing Ngarso Sung Tulodo artinya nmenjadi seorang pemimpin harus mampu memberikan suri tauladan."
     extend "Ing Madyo Mbangun Karso, artinya seseorang ditengah kesibukannya harus juga mampu membangkitkan atau menggugah semangat."
-    extend "Tut wuri handayani, artinya di belakang bisa memberi dorongan”"
-    Suma "“Kok kamu tahu?”"
-    Stefan "“Guru itu yang mengartikannya untukku,”"
-    extend "(menjawab dengan bangga.)"
-    Suma "“Oh. Ya sudah. Thanks,”"
-
+    extend "Tut wuri handayani, artinya di belakang bisa memberi dorongan"
+    Suma "Kok kamu tahu?"
+    Stefan "Guru itu yang mengartikannya untukku"
+    extend "(Bangga)"
+    Suma "Oh. Ya sudah. Thanks."
     centered "(Suma mulai berjalan dari kelas untuk pulang dan diikuti oleh Stefan.)"
 
-
 label scene12:
-    centered "(Saat ini mereka berada di rumah Stefan pada sore hari karena Suma sudah setuju untuk membantu Stefan dengan Pelajaran matematika. Rumah itu terletak di dekat sekolah, tetapi Suma merasa tidak familiar dengan bangunan tua ini, yang jauh berbeda dari rumah-rumah modern yang dia kenal.)"
+    centered "(Mereka tiba di rumah Stefan)"
 
-    centered "(Stefan membawa buku matematika yang tebal, dan mereka duduk di meja belajar di ruang keluarga. Suma mulai menjelaskan pelajaran matematika dengan tekun, sementara Stefan dengan penuh semangat mencoba mengerti dan mengikuti penjelasan Suma. Meskipun ada perbedaan bahasa dan budaya di antara mereka, mereka akhirnya mulai bekerja sama dengan baik.)"
+    # nampilin rumah stefan view dari luar
+    # terus nampilin ruang tengah rumah stefan
 
-    centered "(Selama proses belajar, Suma mulai merasa bahwa Stefan tidak begitu buruk seperti yang dia kira awalnya. Dia melihat kegigihan Stefan untuk memahami pelajaran matematika dan bagaimana dia mencoba keras untuk belajar, meskipun bahasanya bukan bahasa ibunya. Mereka mulai berbicara tentang hal-hal lain di luar pelajaran, dan akhirnya, mereka mulai berbagi cerita tentang kehidupan mereka masing-masing di masa kini)"
+    centered "(Mereka duduk di ruang tengah rumah Stefan)"
+    Suma "(Mengeluarkan buku matematikanya yang cukup tebal)"
+    Stefan "(Mata berbinar)"
+    Suma "Kenapa mukamu gitu?"
+    Stefan "Senang"
+    Suma "Senang?"
+    Stefan "(Mengangguk) Buku tebal, terlihat menarik"
+    Suma "(Tersenyum, karena akhirnya mempunyai teman yang menyukai matematika sama sepertinya) "
+    Stefan "Kenapa senyum?"
+    Suma "Uang"
+    Stefan "..."
 
-    Suma "“Stef, kok bisa sih lu berpihak ke Indonesia?”"
-    Stefan "(Menatap Suma bingung)"
-    extend "“Maksudnya?”"
-    Suma "(Menepuk dahi. Lagi-lagi lupa jika ia sedang melintas zaman)"
-    Suma "“Maksudnya, kenapa kau bisa berpihak ke Indonesia? Padahal kau bukan pribumi.”"
-    Stefan "(Tersenyum)"
-    extend " “Aku suka di sini daripada Netherland! Papa mama juga…” "
-    extend "(ucapnya menggebu-gebu.)"
-    Suma "“...Kenapa?” "
-    Stefan "“Aku suka kue putu!”"
+    centered "(Mereka mulai belajar dengan Suma yang menjadi tutor)"
 
-    centered "(Suma tidak habis pikir. Menurutnya itu alasan yang konyol. Tapi, ya sudahlah. Selama dia bersikap baik, maka ia juga akan bersikap baik.)"
+    Suma "Stef, kok bisa sih lu berpihak ke Indonesia?"
+    Stefan "(Berhenti menulis) Maksudnya?"
+    Suma "Maksudnya, kenapa kau bisa berpihak ke Indonesia? Padahal kau bukan pribumi"
+    Stefan "(Tersenyum) Aku suka di sini daripada Netherland! Papa mama juga..."
+    Suma "Kenapa?"
+    Stefan "Aku suka kue putu!"
+    Suma "... "
+    extend "bjir (batinnya)"
 
-    centered "(Kemudian Stefan menceritakan tentang keluarganya, ayahnya yang bekerja sebagai pegawai pemerintah Belanda dan menikah dengan ibunya yang merupakan seornag wanita cantik dari Indonesia. Dia juga mengungkapkan bahwa dia adalah anggota keluarga yang beruntung karena bisa mendapatkan pendidikan yang baik. Namun, dia juga merasa dilema karena mengetahui ketidakadilan yang terjadi di bawah pemerintahan Belanda di Indonesia.)"
+    centered "(Kemudian Stefan menceritakan tentang keluarganya)"
+    centered "(Ayahnya yang bekerja sebagai pegawai pemerintah Belanda dan menikah dengan ibunya yang merupakan seornag wanita cantik dari Indonesia)"
+    centered "(Dia juga mengungkapkan bahwa dia adalah anggota keluarga yang beruntung karena bisa mendapatkan pendidikan yang baik)"
 
-    centered "(Suma yang awalnya curiga, menjadi merasa simpati mendengar cerita Stefan, dan dia mulai melihatnya sebagai individu yang terpisah dari pemerintah Belanda yang menjadi penjajah. Mereka mulai berbicara tentang impian mereka masing-masing dan harapan untuk masa depan.)"
+    Suma "(Mengangguk paham)"
 
-    centered "(Saat mereka berbicara, orang tua Stefan, yaitu Nyonya Driessen dan Tuan Driessen, masuk ke dalam ruang keluarga. Mereka adalah orang Belanda yang tinggal di Indonesia, dan mereka terlihat ramah kepada Suma. Meskipun ada bahasa dan budaya yang berbeda, mereka mencoba berkomunikasi dengan Suma dan mengenalkan diri mereka.)"
-
-    centered "(Sejak saat itu, Suma dan Stefan mulai akrab satu sama lain.)"
+    centered "(Saat mereka berbicara, orang tua Stefan, yaitu Nyonya Driessen dan Tuan Driessen, masuk ke dalam ruang keluarga."
+    centered "Mereka adalah orang Belanda yang tinggal di Indonesia, dan mereka terlihat ramah kepada Suma. Meskipun ada bahasa dan budaya yang berbeda, mereka mencoba berkomunikasi dengan Suma dan mengenalkan diri mereka.  )"
+    centered "(Sejak saat itu, Suma dan Stefan mulai akrab satu sama lain)"
 
 label scene13:
-    centered "(Suatu hari, saat Suma selesai mengajari Stefan Pelajaran matematika seperti biasa, ia mendengar suara orang mengobrol dari arah pintu masuk. Kemudian, pintu terbuka dan mengungkapkan suasana hangat dari sebuah rumah dengan perabotan kayu jati klasik. Suara tawa dan percakapan penuh semangat mengisi ruangan.)"
+    centered "(Suatu hari, saat Suma selesai mengajari Stefan Pelajaran matematika seperti biasa, ia mendengar suara orang mengobrol dari arah pintu masuk)"
 
-    centered "(Hari ini adalah hari di mana Tuan Driessen menjadi tuan rumah dalam pertemuan untuk berdiskusi tentang perjuangan kemerdekaan. Suma dan Stefan bersemangat karena Ayah Stefan bilang Soekarno dan tokoh-tokoh pejuang kemerdekaan lainnya akan datang.)"
+    # janlup sfx
+    # nampilin pintu terbuka, perabotan kayu jati
+    # ada suara berbincang dan tawa
 
-    Suma "(“What?! Soekarno??!” Terkejut setengah mati)"
-    Suma "“Apa kau tahu Pak Soekarno itu siapa?”"
-    extend "(berapi-api)"
-    Stefan "“Siapa?”"
-    Suma "(Dia memang bodoh atau pura-pura bodoh?)"
-    Suma "“Beliau sering ke sini ‘kan?”"
-    show stefan_giggleFace at left
-    Stefan "(Tersenyum)"
-    extend " “Tidak ingat.”"
+    centered "(Hari ini adalah hari di mana Tuan Driessen menjadi tuan rumah dalam pertemuan untuk berdiskusi tentang perjuangan kemerdekaan)"
+    centered "(Suma dan Stefan bersemangat karena Ayah Stefan bilang Soekarno dan tokoh-tokoh pejuang kemerdekaan lainnya akan datang)"
+
+    Suma "What? Soekarno?!"
+    Suma "Apa kau tahu Pak Soekarno itu siapa?"
+    Stefan "Siapa?"
+    Suma "..."
+    Suma "Beliau sering ke sini ‘kan?"
+    show stefan_giggleFace
+    Stefan "Tidak ingat"
     hide stefan_giggleFace
-    Suma "(“Remaja jompo ada di mana-mana ya...”)"
 
-    centered "(Acara itupun segera dimulai. Soekarno, duduk di tengah-tengah, dengan gagah dan penuh wibawa memimpin diskusi. Dia dengan bersemangat menjelaskan visi dan hasrat mereka untuk membebaskan Indonesia dari cengkraman penjajah.)"
+    centered "(Acara itupun dimulai)"
+    centered "(Selama di sekolah Suma tidak pernah membayangkan orasi dari Soekarno bisa sekeren ini. Teks-teks dan gambar burik di buku paket sejarahnya tidak bisa menyalurkan kekerenan ini dengan baik. )"
 
-    centered "(Audiens mendapatkan petuah dari Soekarno, seperti awal mula terbentuknya sifat nasionalisme pemuda dan bagaimana Indonesia saat ini melalui sudut pandang Soekarno. Suma duduk dengan penuh keterpesonaan di samping Stefan. Dia memperhatikan dengan cermat setiap kata yang diucapkan oleh Soekarno.)"
+    Suma "Ternyata disaksikan secara langsung public speaking Pak Soekarno keren juga (batinnya)"
 
-    Suma "(“Ternyata disaksikan secara langsung public speaking Pak Soekarno keren juga....”)"
+    centered "(Sesaat kemudian seseorang datang menyusul ke ruangan ini)"
 
-    centered "(Sesaat kemudian seseorang datang menyusul ke ruangan ini. Itu adalah seorang pemikir intelektual yang maju untuk mengungkap gagasannya. Beliau membahas gagasannya tentang bentuk pemerintahan yang akan datang setelah merdeka.)"
+    Suma "Itu Mohammad Hatta! Hatta woi! (sambil mengguncang bahu Stefan, saking senangnya)"
+    Stefan "Kenapa?"
+    Suma "Kok kenapa? Itu Mohammad Hatta!!"
+    Stefan "Iya, lalu?"
+    Suma "(Suma menepuk dahinya keras-keras. Dia lupa kalau sedang ada di lain zaman dan fakta bahwa Stefan ini tidak tahu menahu tentang para pahlawan revolusi)"
 
-    Suma "(menyadari sesuatu)"
-    extend "“Itu Mohammad Hatta!”"
-    Stefan "“Kenapa?”"
-    Suma "Kok kenapa? Itu Mohammad Hatta!!”"
-    Stefan "“Iya lalu?”"
-    Suma "(menepuk dahi)"
-    extend "(“Ah tuhkan aku lupa lagi”)"
+    centered "Acara berlanjut dengan lancar"
+    centered "..."
+    centered "Pertanyaan!"
+    #pertanyaan 8 dan 9
 
-    centered "(Setelah Hatta, anggota-anggota pertemuan itu juga menyampaikan pandangan dan ide masing-masing. Mereka membahas rencana untuk membangun bangsa yang merdeka, berdaulat, dan adil. Diskusi itu memancarkan semangat persatuan dan tekad untuk mencapai tujuan bersama.)"
+    label pertanyaanCH2_3:
+        centered "Pertanyaan!"
+        "'Bersatu kita teguh, bercerai kita runtuh' merupakan sajak yang dibuat oleh?"
+        menu:
+            "Sutan Sjahrir":
+                jump pertanyaanCH2_4
+            "Soekarno":
+                jump pertanyaanCH2_4
+            "Muh. Yamin":
+                $ nilai += 5
+                jump pertanyaanCH2_4
+            "Ki Hajar Dewantara":
+                jump pertanyaanCH2_4
+    
+    label pertanyaanCH2_5:
+        "Ing ngarsa sung tuladha.Ing madya mangun Karsa. Tut Wuri Handayani. Tiga kalimat itu merupakan semboyan dari Ki Hadjar Dewantara. Apa artinya?"
+        menu:
+            "Seorang pemimpin harus mampu meneladani dan memberi semangat meskipun di tengah kesibukannya":
+                $ nilai += 5
+                jump scene14
+            "Menjadi seorang pemimpin harus mampu memberikan suri tauladan":
+                jump scene14
+            "Seseorang ditengah kesibukannya harus juga mampu membangkitkan atau menggugah semangat":
+                jump scene14
+            "Lupa":
+                jump scene14
 
-    Suma "(memerhatikan diskusi dengan seksama)"
-    extend " (“Menyaksikan pahlawan-pahlawan ini secara langsung ternyata seru juga.” batin Suma)"
+label scene14:
+    "hasil: [nilai] poin"
 
-    centered "(Lalu setelah diskusi yang panjang itu selesai dan makanan dihidangkan, Tuan Driessen memperkenalkan Suma dan Stefan kepada orang-orang di dalam ruangan. Tuan Driessen memperkenalkan Stefan sebagai anaknya dan Suma sebagai teman anaknya.)"
-
-    #end dari chapter 2
+            
 
 
+################# CHAPTER 03 ##########################
 
 
 
+
+############### CHAPTER 04 ################
+label scene20:
+    centered "Kami bangsa Indonesia..."
+    # play bgm indonesia raya
+
+    Suma "Huh?"
+
+    Radio "... diselenggarakan dengan tjara seksama..."
+    Radio "Disoearakan oleh Soekarno di Djalan Pengangsaan Timoer 56."
+    extend "Djakarta, hari 17 boelan 8 tahoen 5"
+
+
+    
+
+
+
+
+
+
+
+
+
+#################################################################
 label bgm:
     #play music "audio/suma_theme.mp3" fadein 1.0 volume 10
     show kaget at left
