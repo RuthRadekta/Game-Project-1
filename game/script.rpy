@@ -44,19 +44,24 @@ default nilai = 0
 #################################################
 
 label start:
-    centered "{color=#FFFFFF}(Bel pulang sekolah berbunyi){/color}"
     #play suara bel
+    play sound "audio/bgm_bel.ogg"
+    centered "{color=#FFFFFF}(Bel pulang sekolah berbunyi){/color}"
+    stop sound
+   
 
 label scene1:
     scene fadein 0.5
     scene ruangkelas_now
     #play suara riuh di kelas
+    play sound "audio/sound_riuh.ogg"
     centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
     centered '{color=#FFF5C2}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
     centered '{color=#FFF5C2}"Besok banget tuh"{/color}'
     show kusuma_suprisedface at left
     Suma "Huh?"
     Suma "(Menghela napas)"
+    stop sound
 
 label scene2:
     show kusuma_restface at left
