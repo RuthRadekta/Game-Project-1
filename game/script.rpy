@@ -11,7 +11,8 @@ define Kakek = Character('Kakek')
 
 define Soekarno = Character('Soekarno', color="#0d1a73")
 define Hatta = Character('Hatta', color="#373e6e")
-define Radio = Character ('<radio>', color="#030303")
+define Radio = Character ('Radio', color="#030303")
+define Massa = Character('Massa', color="#030303")
 
 #image opening = "..."
 
@@ -44,11 +45,9 @@ default nilai = 0
 #################################################
 
 label start:
-    #play suara bel
     play sound "audio/bgm_bel.ogg"
     centered "{color=#FFFFFF}(Bel pulang sekolah berbunyi){/color}"
     stop sound
-   
 
 label scene1:
     scene fadein 0.5
@@ -150,7 +149,7 @@ label scene5:
     Mbah "(Berhenti tertawa)"
     Mbah "Yowes, tetep kerjo. Ayo!"
     hide normal
-    scene fadeout 0.5
+    # scene fadeout 0.5
 
 label scene6:
     centered "(EDIT)entar nampilin hamparan sawah hijau yang membentang"
@@ -206,7 +205,7 @@ label scene7:
     Mbah "(Tersenyum kembali)" 
     Mbah "Yowes, le. Ayo bali. Kita masih punya banyak yang harus kau pelajari."  
     centered "(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini)"
-    scene fadeout 0.5
+    # scene fadeout 0.5
     Suma "Siapa tuh, mbah?"
     extend "(tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
     Mbah "Oh.. jenenge Sutan Syahrir. "
@@ -278,12 +277,15 @@ label scene8:
         menu:
             "Konferensi Meja Bundar":
                 jump pertanyaanCH1_2
+                $ nilai += 2
             "Konferensi Rijswijk 1939":
                 $ nilai += 5
                 jump pertanyaanCH1_2
             "Konferensi Hindia Belanda":
+                $ nilai += 2
                 jump pertanyaanCH1_2
             "Koferensi Rijswijk 1940":
+                $ nilai += 2
                 jump pertanyaanCH1_2
     
     label pertanyaanCH1_2:
@@ -293,33 +295,42 @@ label scene8:
                 $ nilai += 5
                 jump pertanyaanCH1_3
             "Memundurkan Belanda dari Indonesia":
+                $ nilai += 2
                 jump pertanyaanCH1_3
             "Memperoleh kemerdekaan Indonesia dari tangan Belanda":
+                $ nilai += 2
                 jump pertanyaanCH1_3
             "Demo untuk kesejahteraan Indonesia":
+                $ nilai += 2
                 jump pertanyaanCH1_3
     
     label pertanyaanCH1_3:
         "Pangeran Diponegoro merupakan pemimpin Perang Diponegoro. Kapan dan dimana perang itu terjadi?"
         menu:
             "Sumatra, tahun 1825-1830":
+                $ nilai += 2
                 jump pertanyaanCH1_4
             "Jawa, tahun 1825-1830":
                 $ nilai += 5
                 jump pertanyaanCH1_4
             "Jawa, tahun 1826-1830":
+                $ nilai += 2
                 jump pertanyaanCH1_4
             "Sumatra, tahun 1826-1830":
+                $ nilai += 2
                 jump pertanyaanCH1_4
     
     label pertanyaanCH1_4:
         "Siasat yang digunakan Belanda untuk melawan Pangeran Diponegoro adalah siasat Benteng Stelsel. Apa tujuan siasat itu?"
         menu:
             "Melancarkan hubungan Belanda dengan Pasukan Diponegoro":
+                $ nilai += 2
                 jump pertanyaanCH1_5
             "Mencegah masuknya bantuan untuk pasukan Belanda":
+                $ nilai += 2
                 jump pertanyaanCH1_5
             "Memperkuat pasukan Belanda":
+                $ nilai += 2
                 jump pertanyaanCH1_5
             "Mempersempit ruang gerak pasukan Diponegoro. Adapun tempat persembunyian utamanya adalah Goa Selarong":
                 $ nilai += 5
@@ -329,13 +340,16 @@ label scene8:
         "Belanda berhasil menguasai Indonesia yang kaya akan rempah-rempah, hal ini membuat Belanda dapat mengatur perdagangan Indonesia untuk memperkayakan dirinya sendiri. Inilah yang disebut Merkantilisme. Jadi, Merkantilisme adalah?"
         menu:
             "Paham sosial yang menekankan bahwa siapa yang kaya, ialah yang berkuasa":
+                $ nilai += 2
                 jump scene9
             "Paham perekonomian yang menganut bahwa keberhasilan suatu negara ditentukan oleh banyaknya modal atau aset yang dimiliki oleh negara":
                 $ nilai += 5
                 jump scene9
             "Paham perekonomian yang menyatakan bahwa keberhasilan suatu negara didasarkan pada kemajuan teknologi yang ada di negara tersebut":
+                $ nilai += 2
                 jump scene9
             "Paham perekonomian tentang untung dan rugi":
+                $ nilai += 2
                 jump scene9
 
 
@@ -377,10 +391,13 @@ label scene9:
                 $ nilai += 5
                 jump pertanyaanCH2_2
             "26 Oktober 1928":
+                $ nilai += 2
                 jump pertanyaanCH2_2
             "28 Oktober 1929":
+                $ nilai += 2
                 jump pertanyaanCH2_2
             "26 Oktober 1929":
+                $ nilai += 2
                 jump pertanyaanCH2_2
     
     # Pertanyaan 7
@@ -391,14 +408,17 @@ label scene9:
                 $ nilai += 5
                 jump benar7
             "Kami putra dan putri Indonesia, mengaku bertumpah darah yang satu, bangsa Indonesia. Kami putra dan putri Indonesia, mengaku berbangsa yang satu, tanah Indonesia.":
+                $ nilai += 2
                 jump salah7
     
     label benar7:
         Mbah "Cucuku pinter tenan jebule"
+        $ nilai += 2
         jump scene10
     
     label salah7:
         Mbah "Heleh, jare ngerti?"
+        $ nilai += 2
         jump scene10
 
 label scene10:
@@ -552,7 +572,7 @@ label scene13:
     Stefan "Iya, lalu?"
     Suma "(Suma menepuk dahinya keras-keras. Dia lupa kalau sedang ada di lain zaman dan fakta bahwa Stefan ini tidak tahu menahu tentang para pahlawan revolusi)"
 
-    centered "Acara berlanjut dengan lancar"
+    centered "(Acara berlanjut dengan lancar)"
     centered "..."
     centered "Pertanyaan!"
     #pertanyaan 8 dan 9
@@ -562,13 +582,16 @@ label scene13:
         "'Bersatu kita teguh, bercerai kita runtuh' merupakan sajak yang dibuat oleh?"
         menu:
             "Sutan Sjahrir":
+                $ nilai += 2
                 jump pertanyaanCH2_4
             "Soekarno":
+                $ nilai += 2
                 jump pertanyaanCH2_4
             "Muh. Yamin":
                 $ nilai += 5
                 jump pertanyaanCH2_4
             "Ki Hajar Dewantara":
+                $ nilai += 2
                 jump pertanyaanCH2_4
     
     label pertanyaanCH2_5:
@@ -576,18 +599,16 @@ label scene13:
         menu:
             "Seorang pemimpin harus mampu meneladani dan memberi semangat meskipun di tengah kesibukannya":
                 $ nilai += 5
-                jump scene14
+                jump scene20
             "Menjadi seorang pemimpin harus mampu memberikan suri tauladan":
-                jump scene14
+                $ nilai += 2
+                jump scene20
             "Seseorang ditengah kesibukannya harus juga mampu membangkitkan atau menggugah semangat":
-                jump scene14
+                $ nilai += 2
+                jump scene20
             "Lupa":
-                jump scene14
-
-label scene14:
-    "hasil: [nilai] poin"
-
-            
+                $ nilai += 2
+                jump scene20
 
 
 ################# CHAPTER 03 ##########################
@@ -596,9 +617,11 @@ label scene14:
 
 
 ############### CHAPTER 04 ################
+
 label scene20:
     centered "Kami bangsa Indonesia..."
     # play bgm indonesia raya
+    # ini radionya latarnya di rumah Stefan
 
     Suma "Huh?"
 
@@ -606,14 +629,51 @@ label scene20:
     Radio "Disoearakan oleh Soekarno di Djalan Pengangsaan Timoer 56."
     extend "Djakarta, hari 17 boelan 8 tahoen 5"
 
+    Suma "Yes! Akhirnya merdeka!"
+    Stefan "Benar! Merdeka!"
+    extend "(Tertawa bersama Suma)"
 
-    
+    #nanti dikasih fade out ya buat nutup scenenya
+
+    centered "(Beberapa bulan kemudian, Agresi Militer Belanda I terjadi)"
+    centered "(Hal ini dikarenakan Belanda menolak mengakui kemerdekaan Indonesia dan memutuskan untuk melancarkan serangan militer)"
+    centered "(Inilah yang disebut sebagai Masa Bersiap)"
+    centered "(Selama Masa Bersiap, Indonesia terus berusaha mempertahankan kemerdekaannya dan mempersiapkan diri untuk menghadapi serangan militer lebih lanjut)"
+    centered "(Masa Bersiap juga mencakup upaya diplomatik untuk memperoleh pengakuan internasional atas kemerdekaan Indonesia)"
+    centered "(Bahkan pertempuran hebat terjadi di kota Surabaya karena ketidaksetujuan Masyarakat terhadapat datangnya sekutu yang merupakan aliansi dari Belanda)"
+    # dikasi sticky notenya bung tomo
+
+    centered "(Tiba-tiba, saat Suma yang sedang berbincang di rumah Stefan, sekelompok Masyarakat berbondong-bondong datang dengan membawa celurit, bambu runcing, golok dan satu-dua senjata api seperti pistol serta bender merah-putih)"
+    Massa "Andjing NICA! Pergi!"
+    centered "(Suma dan Stefan yang berada di ruang tengah langsung beranjak karena merasa kaget. Sekian detik kemudian, suara teriakan dari ibu Stefan terdengar dan seruan dari ayah Stefan berhasil membuat Stefan ketakutan)"
+    centered '"Het huis uit, Stefan!!"'
+
+    Suma "Kenapa? Apa??!"
+    Stefan "Lari!"
+
+    centered "(Stefan berlari keluar dari rumah melalui pintu belakang dan diikuti oleh Suma)"
+    centered "(Namun, massa berhasil memaksa masuk ke dalam rumah dan menembakkan peluru dua kali ke punggung Stefan. Suma yang kaget melihat Stefan tergeletak pun berhenti dan membantu Stefan)"
+    Massa "Masih ada satu pro-Belanda!"
+    Suma "A-aku bukan. Aku orang Indonesia!"
+    centered "(Tapi sepertinya massa mengabaikan pernyataan Suma. Maka saat salah satu warga mengangkatkan golok ke arah Suma, dia tanpa sadar berteriak dan menutup mata erat karena ketakutan)"
+
+
+##################### CHAPTER 05 #######################
 
 
 
 
 
 
+
+
+
+
+
+###################### NILAI ########################
+
+label nilai:
+    "Nilai ulangan kamu: [nilai]"
 
 
 
