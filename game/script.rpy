@@ -939,6 +939,52 @@ label scene13:
 
 ################# CHAPTER 03 ##########################
 
+label scene14:
+    centered "(Siang itu Suma memasuki ruang tengah dengan menggaruk tengkuknya. Mbah Seno sedang sibuk dengan sesuatu yang membuatnya penasaran.)"
+
+    Suma "(Menengok mbah seno yang sedang mengutak-atik sebuah barang)"
+    extend "“Sedang apa mbah?”"
+    Mbah "(tidak menjawab dan malah memukul benda itu)"
+
+    centered "“Duak!!”"
+
+    Suma "(Kaget)"
+    extend " “Lho lho lho santai mbah”"
+    Mbah "“Santai mu iku, ki lho delengen”"
+    extend "(menunjuk benda itu yang tiba-tiba mengeluarkan suara)"
+    Suma "“Wuah”"
+    extend " “Ini apa mbah?”"
+    Mbah "“Radio ini, tadi mbah dapat murah dari juragan barang bekas. "
+    extend "Bagus tho?”"
+    Suma "(“Masih bagusan televisi di zamanku mbah” batin suma)"
+
+    centered "(Mbah Seno meletakkan Radio yang bersuara krusak-krusak itu di meja dan memutar tuner hingga radio mencapai siaran jernih)"
+
+    Mbah "“Wes kene ayo lungguh mirengne penyiar e”"
+    Suma "(tidak begitu paham arti kalimatnya tapi dia mengikuti mbah seno duduk.)"
+
+    centered "(Sementara itu saluran radio selesai beriklan dan memasuki sebuah acara berita)"
+
+    Pemberita "“Selamat datang kembali, sahabat Radio Merdeka, di episode spesial kita yang memori perjalanan panjang menuju kemerdekaan Indonesia. Saya, Ruswandi, akan mengajak Anda mengenang momen-momen bersejarah kita pada rentang waktu 1942 hingga kini. Tanpa menunggu lebih lama, mari kita mulai.”"
+    Pemberita "“Di awal masa pendudukan Jepang pada tahun 1942, tanah air ini menjadi saksi bisu dari perubahan besar. Dengan berat hati, kita memasuki era pendudukan yang membawa berbagai perubahan. Begitu pula peristiwa pertama yang ingin saya kenang...”"
+    Pemberita "“Tahun 1942, bendera matahari terbit berkibar di bumi Indonesia. Pendudukan Jepang memasuki babak baru dalam sejarah kita. Meskipun hadir dengan tantangan dan perubahan, periode ini juga menjadi waktu di mana semangat perlawanan mulai tumbuh di hati pejuang kemerdekaan. Pergolakan batin yang menjadi benih dari perubahan besar yang akan datang.”"
+    Pemberita "“Dan di tengah rentang waktu yang sulit itu, kita bergerak maju menuju momen berikutnya yang menjadi batu loncatan untuk meraih kemerdekaan kita.”"
+    Pemberita "“Tanggal 29 Mei 1945, di tengah kekhawatiran dan harapan, badan penyelidik kita, BPUPKI, resmi dibentuk. Para tokoh bangsa berkumpul untuk menentukan arah perjalanan kita. Di sinilah semangat kemerdekaan mulai diukir dalam dokumen dan pidato. Ideologi yang kelak akan menggerakkan bangsa kita menuju kemerdekaan, Pancasila, muncul dari perdebatan yang sengit namun penuh semangat.”"
+    Pemberita "“Dalam suara merdu dan kata-kata bijak, pada tanggal 1 Juni 1945, di dalam ruang sidang BPUPKI, Indonesia melahirkan ideologi yang akan menjadi pilar kekuatan dan persatuan bagi seluruh rakyat. Inilah momen ketiga dalam perjalanan panjang kita menuju kemerdekaan: Pancasila sebagai Dasar Negara”"
+    Pemberita "“Gambar ini membawa kita kembali ke saat-saat di mana Dr. Soekarno dan Mohammad Hatta dengan gagah berani menyatukan pemikiran dan idealisme dalam konsep Pancasila. Lima sila yang mendasari negara kita: Ketuhanan Yang Maha Esa, kemanusiaan yang adil dan beradab, persatuan Indonesia, kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan dan perwakilan, dan keadilan sosial bagi seluruh rakyat Indonesia”"
+
+    #iki apik e dikasih cuplikan rekaman pidato Soekarno di sidang BPUPKI gak?
+
+    Pemberita "“Inilah landasan moral dan spiritual yang mengikat kita sebagai bangsa. Pancasila bukanlah sekadar kata-kata, tetapi pilar yang memandu perjalanan kita menuju kemerdekaan sejati.”"
+    Pemberita "“Dan tak lama setelah itu, datang momen puncak yang membahagiakan hati setiap anak bangsa. Pada tanggal 17 Agustus 1945, detik-detik yang penuh semangat dan harapan, Soekarno dan Hatta, dengan tekad yang bulat, menyatakan kemerdekaan Indonesia di depan rumah mereka yang sederhana.”"
+    Pemberita "“Hari itu, bukan hanya sebuah deklarasi, tapi sebuah janji untuk hidup dalam kemerdekaan, sebuah janji untuk menjadi bangsa yang besar. Bendera merah putih berkibar, menyala, memancarkan semangat perjuangan yang akan menjadi cahaya bagi generasi-generasi mendatang”"
+    Pemberita "“Sekarang, mari kita lanjutkan perjalanan kita melalui dua momen yang sangat berarti dalam sejarah kita, saat-saat yang membentuk jati diri bangsa ini. Setelah kemerdekaan diumumkan pada tanggal 17 Agustus 1945, Indonesia menghadapi ujian besar dalam wujud Pertempuran Lima Hari di Surabaya.”"
+    Pemberita "“Pada Oktober-November 1945, kota pahlawan Surabaya menjadi saksi dari semangat perjuangan yang melibatkan pasukan pemuda dan tentara Indonesia melawan pasukan Inggris yang baru tiba. Pertempuran Lima Hari ini bukan hanya tentang menentang kehadiran asing, tetapi juga merupakan bentuk perlawanan terhadap kolonialisme yang telah lama menghimpit.”"
+    Pemberita "“Saat-saat itu mengajarkan kita tentang keberanian, persatuan, dan pengorbanan. Pemuda Indonesia bersatu, melupakan perbedaan dan bersatu untuk membela tanah air. Pertempuran ini mungkin membawa duka, tetapi juga menjadi tonggak sejarah yang membuktikan bahwa semangat kemerdekaan mengalir deras di setiap pembuluh darah bangsa ini.”"
+    Pemberita "“Namun, pertempuran ini hanyalah bab dalam buku sejarah panjang kita. Seiring waktu berlalu, perjuangan ini terus berlanjut. Dan di panggung dunia, perjuangan diplomatik pun tak kalah pentingnya.”"
+    Pemberita "“Desember 1945, dunia melihat pengakuan internasional terhadap kedaulatan Indonesia. Konferensi Tingkat Tinggi PBB di San Francisco menyaksikan langkah awal Indonesia sebagai negara merdeka yang diakui oleh dunia internasional. Belanda, dengan segala pasrah, setuju untuk mengakui kemerdekaan Indonesia melalui Kesepakatan Linggarjati dan Persetujuan Renville.”"
+    Pemberita "“Pengakuan ini bukan hanya sekadar tinta di atas kertas, melainkan simbol dari perjuangan dan pengorbanan yang telah dilakukan oleh generasi sebelum kita. Ini adalah hasil dari kesatuan dan tekad kita sebagai bangsa, serta bukti bahwa kemerdekaan bukanlah impian kosong.”"
+    Pemberita "“Maka, pada saat yang tepat ini, mari kita bangkitkan semangat kita, merayakan kemenangan dalam perjuangan panjang kita menuju kemerdekaan. Pancasila dan Proklamasi Kemerdekaan, dua pilar yang kokoh, membimbing kita menuju masa depan yang lebih baik. Terima kasih telah menyaksikan, dan bersama-sama kita lanjutkan perjalanan melihat lebih banyak kisah heroik dalam sejarah kemerdekaan kita. Sampai jumpa di episode berikutnya.” "
 
 
 
