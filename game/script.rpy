@@ -8,6 +8,7 @@ define Suma = Character('Suma', color="#508D69")
 define Stefan = Character('Stefan', color="#F3B664")
 define Mbah = Character('Mbah', color="#872341")
 define Kakek = Character('Kakek')
+define Pemberita = Character('Pemberita', color="#a5c951")
 
 define Soekarno = Character('Soekarno', color="#0d1a73")
 define Hatta = Character('Hatta', color="#373e6e")
@@ -942,29 +943,48 @@ label scene13:
 label scene14:
     centered "(Siang itu Suma memasuki ruang tengah dengan menggaruk tengkuknya. Mbah Seno sedang sibuk dengan sesuatu yang membuatnya penasaran.)"
 
+    show normal at left
     Suma "(Menengok mbah seno yang sedang mengutak-atik sebuah barang)"
     extend "“Sedang apa mbah?”"
+    hide normal
+    show mbah_normal at left
     Mbah "(tidak menjawab dan malah memukul benda itu)"
+    hide mbah_normal
 
     centered "“Duak!!”"
 
+    show kaget at left
     Suma "(Kaget)"
     extend " “Lho lho lho santai mbah”"
+    hide kaget
+    show mbah_normal at left
     Mbah "“Santai mu iku, ki lho delengen”"
     extend "(menunjuk benda itu yang tiba-tiba mengeluarkan suara)"
+    hide mbah_normal
+    show normal at left
     Suma "“Wuah”"
     extend " “Ini apa mbah?”"
+    hide normal
+    show mbah_senyum at left
     Mbah "“Radio ini, tadi mbah dapat murah dari juragan barang bekas. "
     extend "Bagus tho?”"
+    hide mbah_senyum
+    show normal at left
     Suma "(“Masih bagusan televisi di zamanku mbah” batin suma)"
+    hide normal
 
     centered "(Mbah Seno meletakkan Radio yang bersuara krusak-krusak itu di meja dan memutar tuner hingga radio mencapai siaran jernih)"
 
-    Mbah "“Wes kene ayo lungguh mirengne penyiar e”"
+    show mbah_senyum at left
+    Mbah "“Wes kene le ayo lungguh mirengne penyiar e”"
+    hide mbah_senyum
+    show normal at left
     Suma "(tidak begitu paham arti kalimatnya tapi dia mengikuti mbah seno duduk.)"
+    hide normal
 
     centered "(Sementara itu saluran radio selesai beriklan dan memasuki sebuah acara berita)"
 
+    show radio at left
     Pemberita "“Selamat datang kembali, sahabat Radio Merdeka, di episode spesial kita yang memori perjalanan panjang menuju kemerdekaan Indonesia. Saya, Ruswandi, akan mengajak Anda mengenang momen-momen bersejarah kita pada rentang waktu 1942 hingga kini. Tanpa menunggu lebih lama, mari kita mulai.”"
     Pemberita "“Di awal masa pendudukan Jepang pada tahun 1942, tanah air ini menjadi saksi bisu dari perubahan besar. Dengan berat hati, kita memasuki era pendudukan yang membawa berbagai perubahan. Begitu pula peristiwa pertama yang ingin saya kenang...”"
     Pemberita "“Tahun 1942, bendera matahari terbit berkibar di bumi Indonesia. Pendudukan Jepang memasuki babak baru dalam sejarah kita. Meskipun hadir dengan tantangan dan perubahan, periode ini juga menjadi waktu di mana semangat perlawanan mulai tumbuh di hati pejuang kemerdekaan. Pergolakan batin yang menjadi benih dari perubahan besar yang akan datang.”"
@@ -985,7 +1005,7 @@ label scene14:
     Pemberita "“Desember 1945, dunia melihat pengakuan internasional terhadap kedaulatan Indonesia. Konferensi Tingkat Tinggi PBB di San Francisco menyaksikan langkah awal Indonesia sebagai negara merdeka yang diakui oleh dunia internasional. Belanda, dengan segala pasrah, setuju untuk mengakui kemerdekaan Indonesia melalui Kesepakatan Linggarjati dan Persetujuan Renville.”"
     Pemberita "“Pengakuan ini bukan hanya sekadar tinta di atas kertas, melainkan simbol dari perjuangan dan pengorbanan yang telah dilakukan oleh generasi sebelum kita. Ini adalah hasil dari kesatuan dan tekad kita sebagai bangsa, serta bukti bahwa kemerdekaan bukanlah impian kosong.”"
     Pemberita "“Maka, pada saat yang tepat ini, mari kita bangkitkan semangat kita, merayakan kemenangan dalam perjuangan panjang kita menuju kemerdekaan. Pancasila dan Proklamasi Kemerdekaan, dua pilar yang kokoh, membimbing kita menuju masa depan yang lebih baik. Terima kasih telah menyaksikan, dan bersama-sama kita lanjutkan perjalanan melihat lebih banyak kisah heroik dalam sejarah kemerdekaan kita. Sampai jumpa di episode berikutnya.” "
-
+    hide radio
 
 
 ############### CHAPTER 04 ################
