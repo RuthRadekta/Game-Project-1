@@ -53,7 +53,7 @@ label scene1:
     scene fadein 0.5
     scene ruangkelas_now
     #play suara riuh di kelas
-    play sound "audio/sound_riuh.ogg"
+    play sound "audio/sound_riuh.ogg" loop
     centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
     centered '{color=#FFF5C2}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
     centered '{color=#FFF5C2}"Besok banget tuh"{/color}'
@@ -63,58 +63,67 @@ label scene1:
     stop sound
 
 label scene2:
+    play sound "audio/steps-in-corridor.mp3" volume 5.0
     show kusuma_restface at left
     Suma "(Berjalan pulang dengan kesal)"
+    play sound "audio/sigh.mp3"
     Suma "Kenapa sih sejarah sok keras banget?"
-    Suma "Toh, Sejarah kan yang penting tahu, "
-    extend "gak harus WAJIB kek gini "
+    Suma "Toh, Sejarah kan yang penting tahu, gak harus WAJIB kek gini. "
     extend "Ribet banget..."
-    Suma "Mana pake ulangan segala lagi. "
-    extend "Dikira mapel yang harus dipikir ini doang? "
+    Suma "Mana pake ulangan segala lagi. Dikira mapel yang harus dipikir ini doang? "
     scene fadeout 1.5
+    stop sound
 
 label scene3:
+    # eh ini scenenya masih ada creditnya
     scene kamar suma 
     with fade
+    play sound "audio/pintu buka.mp3"
     centered "{color=#FFFFFF}(Sesampainya di rumah...){/color}"
     show kusuma_restface at left
     Suma "Ngantuk... "
     hide kusuma_restFace
     extend "Pen tidur..."
     scene fadeout 3.5
+    stop sound
 
 label scene4:
     scene kamar lama
     with fade
+    play music "audio/ambient-dream.mp3" loop
     show normal at left
-    Suma "Loh? "
-    extend "(Melihat sekitar) "
+    Suma "Loh? (Melihat sekitar) "
     extend "Kamar siapa ini? "
     centered '"Le, ijek durung tangi to?"'
     hide normal
     show kaget at left
-    Suma "(Mendengar sesuatu) "
-    extend "Huh? "
+    Suma "(Mendengar sesuatu) Huh? "
     extend "Ada orang jawa?! "
-    Suma "Siapa?! "
-    extend "Ayah ya? "
+    Suma "Siapa?! Ayah ya? "
     extend "Tapi kok berat gitu... "
+    play sound "audio/squeaky-door.mp3"
     centered "(Mbah Seno masuk ke kamar Suma dan berkacak pinggang)"
-    Mbah "Le, le... turu teros! "
-    extend "(Berjalan mendekati Suma) "
+    play sound "audio/foot-steps.mp3" volume 6.0
+    Mbah "Le, le... turu teros! (Berjalan mendekati Suma) "
     show kaget at left
     Suma "(Membatin) Huh? "
     extend "Mbah Seno! "
     extend "Kok hidup lagi?! "
+    stop sound
+    stop music
+
+    play sound "audio/pat.mp3"
     Mbah "(Menepuk pipi Suma) "
-    extend "Ngopo to koe ki? "
-    extend "Ndang tangi, ngewangi simbah! "
+    extend "Ngopo to koe ki? Ndang tangi, ngewangi simbah! "
     Mbah "(Lalu keluar dari kamar Suma) "
     Suma "(Kaget, tapi langsung nyusul)"
+    stop sound
     scene fadeout 0.5
+    with fade
 
 label scene5:
     hide kaget
+    play music "audio/bgm2.mp3"
     # nunjukin sekeliling rumah
     centered "(EDIT)entar nunjukin sekeliling rumah, kira-kira 4 gambar"
     centered "(Suma sampai halaman depan)"
@@ -131,8 +140,8 @@ label scene5:
     extend "Lak takon neh"
     Suma "(Terkekeh malu)"
     extend "Anu, Mbah... "
-    extend "Sebenarnya aku gak paham sama maksud mbah, "
-    extend "noto sawah itu apa ya, Mbah?"
+    extend "Sebenarnya aku gak paham sama maksud mbah..."
+    Suma "Noto sawah itu apa ya, Mbah?"
     Mbah "(entar nunjukin muka kaget atau sejenisnya)"
     Mbah "Ngene lho, le. "
     extend "Keluargane awakdewe kan nduwe sawah, makane kui awakdewe kudu njogo. "
@@ -158,16 +167,17 @@ label scene6:
     Suma "Mbah, apa yang harus aku lakukan di sini?"
     hide normal
     Mbah "(Tersenyum)"
-    Mbah "Yo seko kene ki, le. Lapang kerja masyarakat kampung, panggon kanggo wong-wong desa kerjo ning kene, garap sawah iki."
-    extend " Iki yo bagian sekolah adat Jawa sing kudu koe reti, le. Koe bakal sinau cara garap sawah,"
-    extend " nah seko kono koe bakal paham artine kerja keras karo gotong royong."
-    Mbah "Kan yo manungsa urip gelem ra gelem akhire bakal bersosialisasi. Dadi ojo opo-opo ngeroso iso dewe ya, le."
-    extend " Saiki, yoh mulai garap."
+    Mbah "Yo seko kene ki, le. Lapang kerja masyarakat kampung, panggon kanggo wong-wong desa kerjo ning kene, garap sawah iki"
+    extend " Iki yo bagian sekolah adat Jawa sing kudu koe reti, le. Koe bakal sinau cara garap sawah"
+    Mbah "Nah seko kono koe bakal paham artine kerja keras karo gotong royong"
+    # bawah: teksnya terlalu panjang /opo-opo/
+    Mbah "Kan yo manungsa urip gelem ra gelem akhire bakal bersosialisasi. Dadi ojo opo-opo ngeroso iso dewe ya, le"
+    Mbah " Saiki, yoh mulai garap"
     show normal at left
-    Suma "(Sedikit ragu, tetapi dia tetap mencoba beradaptasi dengan situasi yang dihadapi.)"
+    Suma "(Sedikit ragu, tapi dia tetap mencoba beradaptasi dengan situasi yang dihadapi)"
+    hide normal
     centered "(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda)"
     centered "(Suma mendengarkan dengan penuh perhatian)"
-    hide normal
 
     Mbah "Pie, Le? Wes paham?"
     menu:
@@ -183,31 +193,35 @@ label scene6:
     label ulang:
         Mbah "Waduh."
         Mbah "Dengerno ya, Le... "
+        # bawah: /bakal/
         extend "Jadi intinya kamu harus mau bersosialisasi. Bukan masalah bakal menyebabkan ketergantungan..."
         Mbah "Tapi, "
         extend "begitulah cara manusia hidup. "
-        extend "Saling tolong0-menolong dan gotong royong..."
+        extend "Saling tolong-menolong dan gotong royong..."
         jump scene7
 
 label scene7:
+    stop music
     centered "(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno)"
     centered "(Selain itu, mereka mulai akrab layaknya keluarga)"
+    
+    play music "audio/afternoon.mp3" volume 2.0
     Mbah "Bagus, le. Kau telah belajar banyak hari ini."
+    # bawah: teksnya terlalu panjang /budaya/
     Mbah "Ini adalah langkah awal dalam perjalananmu untuk memahami sejarah dan budaya kita. "
     extend "Ingatlah, kita harus menghargai warisan nenek moyang kita dan belajar dari mereka."
     Suma "(Mengangguk paham)"
     Suma "Terima kasih, Mbah. Aku akan mencoba yang terbaik."
-    Mbah "(Mengangkat sebelah alisnya)" 
+    Mbah "(Mengangkat sebelah alisnya) " 
     extend "Sampai kapan kau akan tinggal di sini, le?"
-    Suma "Aku belum tahu, Mbah... "
-    extend "(Tersenyum) "
+    Suma "Aku belum tahu, Mbah... (Tersenyum) "
     extend "Tapi sepertinya aku bakal betah di sini"
     Mbah "(Tersenyum kembali)" 
     Mbah "Yowes, le. Ayo bali. Kita masih punya banyak yang harus kau pelajari."  
     centered "(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini)"
     # scene fadeout 0.5
     Suma "Siapa tuh, mbah?"
-    extend "(tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
+    extend " (Tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
     Mbah "Oh.. jenenge Sutan Syahrir. "
     extend "Tapi biasane aku nyeluk 'Si Kancil' "
     Suma "... (gak paham bahasa jawa)"
@@ -230,6 +244,7 @@ label scene7:
     Suma "(Menggelengkan kepala)"
     Mbah "Pangeran Diponogoro itu pemimpinnya Perang Diponegoro, perang yang terjadi di Jawa pada masa kolonial Belanda (1825-1830). "
     extend "Pangeran Diponegoro memimpin perlawanan terhadap tindakan Belanda yang merampas tanahnya dan mengeksploitasi rakyat dengan pajak yang tinggi. "
+    # bawah: /sengit/
     Mbah "Perlawanan Diponegoro mendapatkan dukungan dari rakyat dan berlangsung sengit di berbagai wilayah Jawa."
     Mbah "Perang ini melibatkan berbagai metode perang modern, termasuk perang terbuka dan gerilya. Belanda menggunakan berbagai cara licik untuk menangkap Diponegoro, "
     extend "termasuk mengeluarkan sayembara. "
@@ -270,21 +285,28 @@ label scene8:
 
     # nah ini nunjukin gambarnya raden saleh
 
+    stop music
     # setelah itu kuis
     label pertanyaanCH1_1:
+        play sound "audio/bell.mp3"
         centered "Pertanyaan!"
+        # semua pertanyaan pake centered ya eh gabisa ding
         "Konferensi apa yang didatangi sekaligus dipimpin oleh Sutan Syahrir?"
         menu:
             "Konferensi Meja Bundar":
+                play sound "audio/klik.mp3"
                 jump pertanyaanCH1_2
                 $ nilai += 2
             "Konferensi Rijswijk 1939":
+                play sound "audio/klik.mp3"
                 $ nilai += 5
                 jump pertanyaanCH1_2
             "Konferensi Hindia Belanda":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_2
             "Koferensi Rijswijk 1940":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_2
     
@@ -292,15 +314,19 @@ label scene8:
         "Apa tujuan konferensi itu diadakan?"
         menu:
             "Membahas masalah dan perselisihan antara pemerintah kolonial Belanda dan para pemimpin Indonesia":
+                play sound "audio/klik.mp3"
                 $ nilai += 5
                 jump pertanyaanCH1_3
             "Memundurkan Belanda dari Indonesia":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_3
             "Memperoleh kemerdekaan Indonesia dari tangan Belanda":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_3
             "Demo untuk kesejahteraan Indonesia":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_3
     
@@ -308,15 +334,19 @@ label scene8:
         "Pangeran Diponegoro merupakan pemimpin Perang Diponegoro. Kapan dan dimana perang itu terjadi?"
         menu:
             "Sumatra, tahun 1825-1830":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_4
             "Jawa, tahun 1825-1830":
+                play sound "audio/klik.mp3"
                 $ nilai += 5
                 jump pertanyaanCH1_4
             "Jawa, tahun 1826-1830":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_4
             "Sumatra, tahun 1826-1830":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_4
     
@@ -324,15 +354,19 @@ label scene8:
         "Siasat yang digunakan Belanda untuk melawan Pangeran Diponegoro adalah siasat Benteng Stelsel. Apa tujuan siasat itu?"
         menu:
             "Melancarkan hubungan Belanda dengan Pasukan Diponegoro":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_5
             "Mencegah masuknya bantuan untuk pasukan Belanda":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_5
             "Memperkuat pasukan Belanda":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump pertanyaanCH1_5
             "Mempersempit ruang gerak pasukan Diponegoro. Adapun tempat persembunyian utamanya adalah Goa Selarong":
+                play sound "audio/klik.mp3"
                 $ nilai += 5
                 jump pertanyaanCH1_5
 
@@ -340,24 +374,28 @@ label scene8:
         "Belanda berhasil menguasai Indonesia yang kaya akan rempah-rempah, hal ini membuat Belanda dapat mengatur perdagangan Indonesia untuk memperkayakan dirinya sendiri. Inilah yang disebut Merkantilisme. Jadi, Merkantilisme adalah?"
         menu:
             "Paham sosial yang menekankan bahwa siapa yang kaya, ialah yang berkuasa":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump scene9
             "Paham perekonomian yang menganut bahwa keberhasilan suatu negara ditentukan oleh banyaknya modal atau aset yang dimiliki oleh negara":
+                play sound "audio/klik.mp3"
                 $ nilai += 5
                 jump scene9
             "Paham perekonomian yang menyatakan bahwa keberhasilan suatu negara didasarkan pada kemajuan teknologi yang ada di negara tersebut":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump scene9
             "Paham perekonomian tentang untung dan rugi":
+                play sound "audio/klik.mp3"
                 $ nilai += 2
                 jump scene9
 
 
 
 ############ CHAPTER 02 ####################
+stop music
 
 label scene9:
-    "Hasil akhir: [nilai] poin"
     centered "Next!"
     centered "Keesokkan harinya, Suma sedang berjalan di ruang tengah dan tidak sengaja menemukan sebuah buku terbuka yang tidak terlalu tebal."
     centered "Dikarenakan penasaran, dia mengambil buku tersebut dan membacanya."
@@ -455,7 +493,7 @@ label scene10:
     Stefan "Hah??"
     Suma "(Menunjuk dirinya sendiri)"
     Stefan "Iya! "
-    extends "Karena kau pintar."
+    extend "Karena kau pintar."
     Suma "Tumben ada yang minta ajar ke gue (batinnya)"
     Suma "(Berdeham)"
     extend "Gak mau (gengsi)"
@@ -594,7 +632,7 @@ label scene13:
                 $ nilai += 2
                 jump pertanyaanCH2_4
     
-    label pertanyaanCH2_5:
+    label pertanyaanCH2_4:
         "Ing ngarsa sung tuladha.Ing madya mangun Karsa. Tut Wuri Handayani. Tiga kalimat itu merupakan semboyan dari Ki Hadjar Dewantara. Apa artinya?"
         menu:
             "Seorang pemimpin harus mampu meneladani dan memberi semangat meskipun di tengah kesibukannya":
@@ -656,78 +694,144 @@ label scene20:
     Massa "Masih ada satu pro-Belanda!"
     Suma "A-aku bukan. Aku orang Indonesia!"
     centered "(Tapi sepertinya massa mengabaikan pernyataan Suma. Maka saat salah satu warga mengangkatkan golok ke arah Suma, dia tanpa sadar berteriak dan menutup mata erat karena ketakutan)"
-
+    # scenenya dikasih fade out agak lama
 
 ##################### CHAPTER 05 #######################
 
+    centered "(Suma terbangun di kamarnya. Dia terengah-engah dan menatap sekeliling. Ini kamarnya yang dulu. Dia sudah kembali ke zamannya)"
+    Suma "(Bernapas lega. Mimpiny tadi terasa seperti nyata)"
+    centered "(Saat Suma keluar dari kamar untuk pergi mengambil minum di dapur, dia melihat kakeknya (Torasumaji Prasasta) sedang menulis sesuatu di ruang Tengah)"
+    Suma "Kakek?"
+    centered "(Kakek menoleh, lalu tersenyum. Suma yang penasaran pun berjalan mendekat untuk melihat apa yang ditulis sang kakek)"
+
+    # nanti nampilin tuh tulisan
+
+    Suma "(Terkejut)"
+
+    # tampilin aja semua ekspresi yang sesuai ama dialog, ndak harus dikasih keterangan "(...)"
+
+    centered "(Maka dari itu dia berlari kembali ke kamarnya dan mengambil buku paket sejarahnya. Dikarenakan penasaran, dia mencari-cari kejadian relevan yang terjadi setelah kemerdekaan)"
+    centered "(Tanpa sadar ia mulai belajar)"
+
+    # nampilin sticky note materi (ada di script.docx)
+
+    centered "Suma mungkin tidak dapat memberikan kontribusi langsung dalam perjuangan Indonesia)"
+    centered "Tapi dia mendapatkan pelajaran berharga tentang arti perjuangan, kemerdekaan, dan tekad yang dibutuhkan untuk mencapai tujuan besar, kemerdekaan Indonesia"
+
+    # scene di fade out karena ini bakal ganti hari
+
+    centered "(Keesokkan harinya...)"
+
+    #nampilin latar dan bgm kek di sekolah
+
+    centered "(Soal ulangan sejarah dibagikan)"
+
+    Suma "(Terkejut) Huh? Sama??"
+
+    centered "(Tidak disangka, soal-soal sejarah itu sebagian besar sama persis seperti di mimpi dan apa yang dia tidak sadar pelajari)"
+
+    centered "Pertanyaan!"
+
+    # Pertanyaan berdasarkan ch04 dan ch05 = jumlah 6
+    label pertanyaanCH4_1:
+        "Kemerdekaan Indonesia diumumkan pada 17 Agustus 1945 silam. Siapa yang memproklamirkan kemerdekaan Indonesia?"
+        menu:
+            "Soekarno Hatta":
+                $ nilai += 2
+                jump pertanyaanCH4_2
+            "Sayuti Melik":
+                $ nilai += 2
+                jump pertanyaanCH4_2
+            "Soekarno":
+                $ nilai += 5
+                jump pertanyaanCH4_2
+            "Muh Yamin":
+                $ nilai += 2
+                jump pertanyaanCH4_2
+
+    label pertanyaanCH4_2:
+        "Agresi Militer Belanda terjadi beberapa bulan setelah diproklamirkan Kemerdekaan Indonesia, lalu berakhir pada 5 Agustus 1947. Apa tujuan Agresi Militer Belanda I?"
+        menu:
+            "Merebut kembali hak milik Belanda":
+                $ nilai += 2
+                jump pertanyaanCH4_3
+            "Merebut kembali kendali atas Indonesia":
+                $ nilai += 5
+                jump pertanyaanCH4_3
+            "Membubarkan Kemerdekaan Indonesia":
+                $ nilai += 2
+                jump pertanyaanCH4_3
+            "Menyatakan perang dengan Indonesia":
+                $ nilai += 2
+                jump pertanyaanCH4_3
+
+    label pertanyaanCH4_3:
+        "Penyebab terjadinya Agresi Militer Belanda I adalah karena Indonesia menolak Rencana Van Mook. Dari kejadian itu terbentuk Perjanjian Renville. Apa salah satu isinya?"
+        menu:
+            "Belanda membentuk lima belas negara federal yang terdiri dari negara-negara boneka, dengan Van Mook sebagai kepala pemerintahannya":
+                $ nilai += 5
+                jump pertanyaanCH4_4
+            "Tidak disetujuinya sebuah garis demarkasi (Van Mook) yang memisahkan wilayah Indonesia dan daerah pendudukan Belanda":
+                $ nilai += 2
+                jump pertanyaanCH4_4
+            "Belanda hanya mengakui Jawa Tengah, Yogyakarta, dan Sumatra sebagai bagian wilayah Republik Indonesia":
+                $ nilai += 2
+                jump pertanyaanCH4_4
+
+    label pertanyaanCH4_4:
+        "Pemberontakan salah satu wilayah di Indonesoa akibat Agresi Militer I Belanda adalah di Surabaya. Saking heoriknya, peristiwa itu diperingati sebagai hari pahlawan. Kapan tepatnya peristiwa itu terjadi?"
+        menu:
+            "10 Oktober 1945":
+                $ nilai += 2
+                jump pertanyaanCH5_1
+            "10 November 1945":
+                $ nilai += 5
+                jump pertanyaanCH5_1
+    
+    label pertanyaanCH5_1:
+        "Belanda kembali melanggar Perjanjian Renville dengan melancarkan Agresi Militer Belanda II. Hal ini menyebabkan Indonesia terpaksa mendirikan Pemerintahan Darurat Republik Indonesia di Bukittinggi, Sumatra Barat di bawah komando Syafruddin Prawiranegara. Acara apa yang menandai akhir Agresi Militer Belanda II?"
+        menu:
+            "Perundingan Roem-Royen":
+                $ nilai += 5
+                jump pertanyaanCH5_2
+            "Konferensi Meja Bundar":
+                $ nilai += 2
+                jump pertanyaanCH5_2
+            "Konferensi Inter-Indonesia":
+                $ nilai += 2
+                jump pertanyaanCH5_2
+            "Perundingan Renville":
+                $ nilai += 2
+                jump pertanyaanCH5_2
+
+    label pertanyaanCH5_2:
+        "Konferensi Meja Bundar dilaksanakan di Den Haag, Belanda. Delegasi Belanda dipimpin oleh van Maarseveen. Delegasi Indonesia dipimpin Drs. Moh. Hatta. Apa hasil dari Konferensi Meja Bundar?"
+        menu:
+            "Menghentikan perang gerilya dan Indonesia-Belanda bekerja sama dalam memelihara ketertiban dan keamanan":
+                $ nilai += 2
+                jump nilai
+            "Dibentuk negara federal yang dinamakan Republik Indonesia Serikat":
+                $ nilai += 2
+                jump nilai
+            "Belanda mengakui kedaulatan Indonesia paling lambat 30 Desember 1949":
+                $ nilai += 5
+                jump nilai
 
 
-
-
-
-
-
-
+    #scene fade out ke situasi pulang sekolah
 
 
 ###################### NILAI ########################
 
 label nilai:
-    "Nilai ulangan kamu: [nilai]"
-
-
+    Suma "Berapa ya nilaiku?"
+    centered "{color=#FFFFFF}Nilai ulangan kamu: {color=#a10b0b}[nilai]{/color}{/color}"
 
 #################################################################
-label bgm:
-    #play music "audio/suma_theme.mp3" fadein 1.0 volume 10
-    show kaget at left
-    Suma "Buset? Londo!"
-    hide kaget
-
-    show stefan_restface at left
-    Stefan "Huh?"
-
-    hide stefan_restface
-    
-label sfx:
-
-label choices:
-    #default learned = False
-    show kaget at left
-    Suma "Dee londo kan ya?"
-    menu:
-        "Hoo":
-            jump hoo
-        "Lah embuh":
-            jump embuh
-
-label hoo:
-    hide kaget
-    show stefan_giggleface at left
-    Stefan "Apa itu 'Londo'?"
-    jump lanjutan_hoo
-
-label lanjutan_hoo:
-    Suma "..."
-    scene black
-    jump end
-
-label embuh:
-    hide kaget
-    show stefan_restface at left
-    Stefan "Embuh? Apa itu 'embuh'?"
-    jump lanjutan_embuh
-
-label lanjutan_embuh:
-    Suma "(His jaw dropped)"
-    scene black
-    jump end
 
 label end:
     #with fade
     $renpy.full_restart()
     return
 
-    
-
-    return
+################## END #################
