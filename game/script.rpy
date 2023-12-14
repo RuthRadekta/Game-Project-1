@@ -58,7 +58,7 @@ label scene1:
     centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
     centered '{color=#FFF5C2}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
     centered '{color=#FFF5C2}"Besok banget tuh"{/color}'
-    show kusuma_suprisedface at left
+    show kusuma_kaget at left
     Suma "Huh?"
     Suma "(Menghela napas)"
     stop sound
@@ -176,8 +176,9 @@ label scene5:
     hide mbah_normal
     show normal at left
     Suma "(Menceritakan semua yang telah terjadi)"
-    centered "..."
     hide normal
+    centered "..."
+    with fade
     show mbah_senyum at left
     Mbah "(Tertawa kecil) "
     extend "Lah... pantes kok bedo. Jebule koe cicitku to"
@@ -209,6 +210,8 @@ label scene6:
     show normal at left
     Suma "(Sedikit ragu, tapi dia tetap mencoba beradaptasi dengan situasi yang dihadapi)"
     hide normal
+
+    centered " "
     with fade
     centered "(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda)"
     centered "(Suma mendengarkan dengan penuh perhatian)"
@@ -240,6 +243,7 @@ label scene6:
 label scene7:
     hide mbah_normal
     stop music
+    centered " "
     with fade
     centered "(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno)"
     centered "(Selain itu, mereka mulai akrab layaknya keluarga)"
@@ -948,15 +952,24 @@ label scene20:
     # play bgm indonesia raya
     # ini radionya latarnya di rumah Stefan
 
+    show normal at left
     Suma "Huh?"
 
     Radio "... diselenggarakan dengan tjara seksama..."
     Radio "Disoearakan oleh Soekarno di Djalan Pengangsaan Timoer 56."
     extend "Djakarta, hari 17 boelan 8 tahoen 5"
 
+    hide normal
+    show senyum at left
     Suma "Yes! Akhirnya merdeka!"
+    hide senyum
+    show stefan_giggle at left
     Stefan "Benar! Merdeka!"
     extend "(Tertawa bersama Suma)"
+    hide stefan_giggle
+    centered " "
+    scene fadeout 1.0
+    with fade
 
     #nanti dikasih fade out ya buat nutup scenenya
 
@@ -968,35 +981,61 @@ label scene20:
     centered "(Bahkan pertempuran hebat terjadi di kota Surabaya karena ketidaksetujuan Masyarakat terhadapat datangnya sekutu yang merupakan aliansi dari Belanda)"
     # dikasi sticky notenya bung tomo
 
+    scene ruang tengah stefan_1
+    with fade
     centered "(Tiba-tiba, saat Suma yang sedang berbincang di rumah Stefan, sekelompok Masyarakat berbondong-bondong datang dengan membawa celurit, bambu runcing, golok dan satu-dua senjata api seperti pistol serta bender merah-putih)"
-    Massa "Andjing NICA! Pergi!"
+    centered '"Andjing NICA! Pergi!"'
     centered "(Suma dan Stefan yang berada di ruang tengah langsung beranjak karena merasa kaget. Sekian detik kemudian, suara teriakan dari ibu Stefan terdengar dan seruan dari ayah Stefan berhasil membuat Stefan ketakutan)"
     centered '"Het huis uit, Stefan!!"'
 
+    show kaget at left
     Suma "Kenapa? Apa??!"
+    hide kaget
+    show stefan_takut at left
     Stefan "Lari!"
+    hide stefan_takut
 
     centered "(Stefan berlari keluar dari rumah melalui pintu belakang dan diikuti oleh Suma)"
     centered "(Namun, massa berhasil memaksa masuk ke dalam rumah dan menembakkan peluru dua kali ke punggung Stefan. Suma yang kaget melihat Stefan tergeletak pun berhenti dan membantu Stefan)"
-    Massa "Masih ada satu pro-Belanda!"
+    centered '"Masih ada satu pro-Belanda!"'
+    show takut at left
     Suma "A-aku bukan. Aku orang Indonesia!"
+    hide takut
     centered "(Tapi sepertinya massa mengabaikan pernyataan Suma. Maka saat salah satu warga mengangkatkan golok ke arah Suma, dia tanpa sadar berteriak dan menutup mata erat karena ketakutan)"
     # scenenya dikasih fade out agak lama
 
 ##################### CHAPTER 05 #######################
 
+    scene black
+    scene fadeout 1.0
+    scene kamar suma
+    with fade
+
     centered "(Suma terbangun di kamarnya. Dia terengah-engah dan menatap sekeliling. Ini kamarnya yang dulu. Dia sudah kembali ke zamannya)"
-    Suma "(Bernapas lega. Mimpiny tadi terasa seperti nyata)"
+    show kusuma_normal at left
+    Suma "(Bernapas lega. Mimpinya tadi terasa seperti nyata)"
+    hide kusuma_normal
+
+    scene fadeout 1.0
+    scene ruang tengah now
+    with fade
     centered "(Saat Suma keluar dari kamar untuk pergi mengambil minum di dapur, dia melihat kakeknya (Torasumaji Prasasta) sedang menulis sesuatu di ruang Tengah)"
+    show kusuma_normal at left
     Suma "Kakek?"
+    hide kusuma_normal
     centered "(Kakek menoleh, lalu tersenyum. Suma yang penasaran pun berjalan mendekat untuk melihat apa yang ditulis sang kakek)"
 
     # nanti nampilin tuh tulisan
 
+    show kusuma_kaget at left
     Suma "(Terkejut)"
+    hide kusuma_kaget
 
     # tampilin aja semua ekspresi yang sesuai ama dialog, ndak harus dikasih keterangan "(...)"
 
+    scene fade out 1.0
+    scene kamar suma
+    with fade
     centered "(Maka dari itu dia berlari kembali ke kamarnya dan mengambil buku paket sejarahnya. Dikarenakan penasaran, dia mencari-cari kejadian relevan yang terjadi setelah kemerdekaan)"
     centered "(Tanpa sadar ia mulai belajar)"
 
@@ -1013,10 +1052,16 @@ label scene20:
 
     centered "(Soal ulangan sejarah dibagikan)"
 
+    show kusuma_restface at left
     Suma "(Terkejut) Huh? Sama??"
+    hide kusuma_restface
 
     centered "(Tidak disangka, soal-soal sejarah itu sebagian besar sama persis seperti di mimpi dan apa yang dia tidak sadar pelajari)"
 
+    scene fadeout 1.0
+    scene bg2
+    with fade
+    play sound "audio/bell.mp3"
     centered "Pertanyaan!"
 
     # Pertanyaan berdasarkan ch04 dan ch05 = jumlah 6
@@ -1131,14 +1176,24 @@ label scene20:
 ###################### NILAI ########################
 
 label nilai:
+    scene fadeout 1.0
+
+    scene kamar suma
+    with fade
+    show kusuma_restface at left
     Suma "Berapa ya nilaiku?"
+    hide kusuma_restface
     play sound "audio/success.mp3"
+
+    scene fadeout 1.0
+    scene bg1
+    with fade
     centered "{color=#FFFFFF}Nilai ulangan kamu: {color=#a10b0b}[nilai]{/color}{/color}"
 
 #################################################################
 
 label end:
-    #with fade
+    with fade
     $renpy.full_restart()
     return
 
