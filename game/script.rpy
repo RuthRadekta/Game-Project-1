@@ -13,6 +13,7 @@ define Soekarno = Character('Soekarno', color="#0d1a73")
 define Hatta = Character('Hatta', color="#373e6e")
 define Radio = Character ('Radio', color="#030303")
 define Massa = Character('Massa', color="#030303")
+define Syahrir = Character('Syahrir', color="#4a0202")
 
 #image opening = "..."
 
@@ -51,7 +52,7 @@ label start:
 
 label scene1:
     scene fadein 0.5
-    scene ruangkelas_now
+    scene kelas sekarang
     #play suara riuh di kelas
     play sound "audio/sound_riuh.ogg" loop
     centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
@@ -104,7 +105,10 @@ label scene4:
     play sound "audio/squeaky-door.mp3"
     centered "(Mbah Seno masuk ke kamar Suma dan berkacak pinggang)"
     play sound "audio/foot-steps.mp3" volume 6.0
-    Mbah "Le, le... turu teros! (Berjalan mendekati Suma) "
+    hide kaget
+    show mbah_normal at left
+    Mbah "Le, le... turu teros! (Berjalan mendekati Suma)"
+    hide mbah_normal
     show kaget at left
     Suma "(Membatin) Huh? "
     extend "Mbah Seno! "
@@ -113,9 +117,13 @@ label scene4:
     stop music
 
     play sound "audio/pat.mp3"
+    hide kaget
+    show mbah_normal at left
     Mbah "(Menepuk pipi Suma) "
     extend "Ngopo to koe ki? Ndang tangi, ngewangi simbah! "
-    Mbah "(Lalu keluar dari kamar Suma) "
+    Mbah "(Lalu keluar dari kamar Suma)"
+    hide mbah_normal
+    show kaget at left
     Suma "(Kaget, tapi langsung nyusul)"
     stop sound
     scene fadeout 0.5
@@ -125,47 +133,70 @@ label scene5:
     hide kaget
     play music "audio/bgm2.mp3"
     # nunjukin sekeliling rumah
-    centered "(EDIT)entar nunjukin sekeliling rumah, kira-kira 4 gambar"
+    # centered "(EDIT)entar nunjukin sekeliling rumah, kira-kira 4 gambar"
+    
+    scene halaman rumah old
     centered "(Suma sampai halaman depan)"
-    centered "(EDIT)entar nunjukin mbah seno yg berdiri dengan caping kepala dan bbrp peralatan berkebun"
+    
+    #centered "(EDIT)entar nunjukin mbah seno yg berdiri dengan caping kepala dan bbrp peralatan berkebun"
+    show mbah_normal at left
     Mbah "Ayo! Gek ndang mangkat!"
+    hide mbah_normal
     show kaget at left
     Suma "M-mau kemana mbah?"
+    hide kaget
+    show mbah_normal at left
     Mbah "Yo nyang ngendi neh? Sawah lah!"
+    hide mbah_normal
+    show normal at left
     Suma "..."
     Suma "Ngapain ke sawah?"
+    hide normal
+    show mbah_normal at left
     Mbah "Bosomu aneh"
     extend ". Pokoke awakdewe bakal noto sawah. "
     extend "(Melirik Suma) "
     extend "Lak takon neh"
-    Suma "(Terkekeh malu)"
+    hide mbah_normal
+    show senyum at left
+    Suma "(Terkekeh malu) "
     extend "Anu, Mbah... "
     extend "Sebenarnya aku gak paham sama maksud mbah..."
     Suma "Noto sawah itu apa ya, Mbah?"
-    Mbah "(entar nunjukin muka kaget atau sejenisnya)"
+    hide senyum
+    show mbah_marah at left
+    Mbah "... ?"
+    show mbah_normal at left
     Mbah "Ngene lho, le. "
     extend "Keluargane awakdewe kan nduwe sawah, makane kui awakdewe kudu njogo. "
     extend "Kui sawah iso dadi sumber awakdewe urip karo dadi lapang kerjane masyarakat kampung"
     Mbah "(Melihat Suma dengan curiga)"
     Mbah "Biasane yo ngene ki lho, le. Kok koe dadi aneh men to?"
-    hide kaget
+    hide mbah_marah
+    hide mbah_normal
     show normal at left
     Suma "(Menceritakan semua yang telah terjadi)"
     centered "..."
+    hide normal
+    show mbah_senyum at left
     Mbah "(Tertawa kecil) "
     extend "Lah... pantes kok bedo. Jebule koe cicitku to"
+    hide mbah_senyum
+    show senyum at left
     Suma "(Tertawa canggung)"
+    hide senyum
+    show mbah_normal at left
     Mbah "(Berhenti tertawa)"
     Mbah "Yowes, tetep kerjo. Ayo!"
-    hide normal
-    # scene fadeout 0.5
+    hide mbah_normal
+    scene fadeout 0.5
 
 label scene6:
-    centered "(EDIT)entar nampilin hamparan sawah hijau yang membentang"
-    centered "(EDIT)terus nampilin petani yang lagi bekerja di sawah"    
+    scene sawah1 
     show normal at left
     Suma "Mbah, apa yang harus aku lakukan di sini?"
     hide normal
+    show mbah_senyum at left
     Mbah "(Tersenyum)"
     Mbah "Yo seko kene ki, le. Lapang kerja masyarakat kampung, panggon kanggo wong-wong desa kerjo ning kene, garap sawah iki"
     extend " Iki yo bagian sekolah adat Jawa sing kudu koe reti, le. Koe bakal sinau cara garap sawah"
@@ -173,12 +204,14 @@ label scene6:
     # bawah: teksnya terlalu panjang /opo-opo/
     Mbah "Kan yo manungsa urip gelem ra gelem akhire bakal bersosialisasi. Dadi ojo opo-opo ngeroso iso dewe ya, le"
     Mbah " Saiki, yoh mulai garap"
+    hide mbah_senyum
     show normal at left
     Suma "(Sedikit ragu, tapi dia tetap mencoba beradaptasi dengan situasi yang dihadapi)"
     hide normal
     centered "(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda)"
     centered "(Suma mendengarkan dengan penuh perhatian)"
 
+    show mbah_normal at left
     Mbah "Pie, Le? Wes paham?"
     menu:
         "Udah, mbah" :
@@ -187,10 +220,12 @@ label scene6:
             jump ulang 
 
     label berikutnya:
+        show mbah_normal at left
         Mbah "Yowes sip"
         jump scene7
     
     label ulang:
+        show mbah_normal at left
         Mbah "Waduh."
         Mbah "Dengerno ya, Le... "
         # bawah: /bakal/
@@ -201,34 +236,59 @@ label scene6:
         jump scene7
 
 label scene7:
+    hide mbah_normal
     stop music
     centered "(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno)"
     centered "(Selain itu, mereka mulai akrab layaknya keluarga)"
     
     play music "audio/afternoon.mp3" volume 2.0
+    show mbah_normal at left
     Mbah "Bagus, le. Kau telah belajar banyak hari ini."
     # bawah: teksnya terlalu panjang /budaya/
     Mbah "Ini adalah langkah awal dalam perjalananmu untuk memahami sejarah dan budaya kita. "
     extend "Ingatlah, kita harus menghargai warisan nenek moyang kita dan belajar dari mereka."
+    hide mbah_normal
+    show normal at left
     Suma "(Mengangguk paham)"
     Suma "Terima kasih, Mbah. Aku akan mencoba yang terbaik."
+    hide normal
+    show mbah_normal at left
     Mbah "(Mengangkat sebelah alisnya) " 
     extend "Sampai kapan kau akan tinggal di sini, le?"
+    hide mbah_normal
+    show senyum at left
     Suma "Aku belum tahu, Mbah... (Tersenyum) "
     extend "Tapi sepertinya aku bakal betah di sini"
+    hide senyum
+    show mbah_senyum at left
     Mbah "(Tersenyum kembali)" 
     Mbah "Yowes, le. Ayo bali. Kita masih punya banyak yang harus kau pelajari."  
+    hide mbah_senyum
     centered "(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini)"
-    # scene fadeout 0.5
+    scene fadeout 1.5
+    
+    show pahlawan_syahrir at left
+    Syahrir "(Menyapa Mbah Seno, lalu berjalan lagi)"
+    hide pahlawan_syahrir
+    show normal at left
     Suma "Siapa tuh, mbah?"
-    extend " (Tanya Suma penasaran saat ada pemuda yang menyapa mbah Seno saat hendak masuk ke halaman rumahnya)"
+    hide normal
+    show mbah_normal at left
     Mbah "Oh.. jenenge Sutan Syahrir. "
     extend "Tapi biasane aku nyeluk 'Si Kancil' "
+    hide mbah_normal
+    show kaget at left
     Suma "... (gak paham bahasa jawa)"
+    hide kaget
+    show mbah_senyum at left
     Mbah "(Tertawa melihat wajah bingung Suma)"
     Mbah "Maksudnya, nama orang itu Sutan Syahrir. Tapi mbah biasanya manggil ‘Si Kancil’, paham?"
+    hide mbah_senyum
+    show normal at left
     Suma "Oh..."
     extend "Terus beliau mau pergi kemana itu, mbah?"
+    hide normal
+    show mbah_normal at left
     Mbah "Rumahnya lah."
     Mbah "Katanya habis datang dari Konferensi Rijswijk yang berlangsung pada tahun ini, 1939. "
     extend "Tujuannya untuk membahas masalah dan perselisihan antara pemerintah kolonial Belanda dan para pemimpin Indonesia."
@@ -236,12 +296,24 @@ label scene7:
     Mbah "Pemimpin konferensi ini ya Si Kancil, tapi di didampingi Tjarda van Starkenborgh, gubernur jendral dari Belanda."
     Mbah "Tapi katanya hasil konferensi ini belum mencapai kesepakatan konkret. "
     extend "Alhasil, kontrol Belanda di Indonesia masih erat dan pokoke waspada ae ya, le."
+    hide mbah_normal
+    show senyum at left
     Suma "(Mengangguk)"
+    hide senyum
+    show mbah_normal at left
     Mbah "(Duduk di teras setelah cuci kaki dan tangan)"
     Mbah "Oiyo le, rene sek."
+    hide mbah_normal
+    show kaget at left
     Suma "(Duduk di sebelahnya) Ya, mbah?"
+    hide kaget
+    show mbah_normal at left
     Mbah "Mbah sudah cerita tentang Pangeran Diponegoro belum to?"
+    hide mbah_normal
+    show normal at left
     Suma "(Menggelengkan kepala)"
+    hide normal
+    show mbah_senyum at left
     Mbah "Pangeran Diponogoro itu pemimpinnya Perang Diponegoro, perang yang terjadi di Jawa pada masa kolonial Belanda (1825-1830). "
     extend "Pangeran Diponegoro memimpin perlawanan terhadap tindakan Belanda yang merampas tanahnya dan mengeksploitasi rakyat dengan pajak yang tinggi. "
     # bawah: /sengit/
@@ -251,6 +323,8 @@ label scene7:
     Mbah "Terus perubahan strategi Belanda terjadi ketika Gubernur Jenderal De Kock menggunakan strategi perbentengan untuk membatasi gerak Diponegoro. "
     Mbah "Perlawanan Diponegoro semakin melemah setelah beberapa pemimpinnya ditangkap. Pada akhirnya, Diponegoro ditangkap pada hari Idulfitri tahun 1830 dan diasingkan ke Manado, lalu Makassar, hingga meninggal di Benteng Rotterdam pada tahun 1855. "
     Mbah "Paham gak?"
+    hide mbah_senyum
+    show normal at left
     Suma "..."
     menu:
         "Paham, mbah!" :
@@ -259,10 +333,14 @@ label scene7:
             jump gakpaham
     
     label paham:
+        hide normal
+        show mbah_senyum at left
         Mbah "Mantap!"
+        hide mbah_senyum
         jump scene8
 
     label gakpaham:
+        show mbah_normal at left
         Mbah "Waduh waduh..."
         extend "Rungokne ya, le..."
         Mbah "Pangeran Diponogoro itu pemimpinnya Perang Diponegoro, perang yang terjadi di Jawa pada masa kolonial Belanda (1825-1830). "
@@ -273,12 +351,19 @@ label scene7:
         Mbah "Terus perubahan strategi Belanda terjadi ketika Gubernur Jenderal De Kock menggunakan strategi perbentengan untuk membatasi gerak Diponegoro. "
         Mbah "Perlawanan Diponegoro semakin melemah setelah beberapa pemimpinnya ditangkap. Pada akhirnya, Diponegoro ditangkap pada hari Idulfitri tahun 1830 dan diasingkan ke Manado, lalu Makassar, hingga meninggal di Benteng Rotterdam pada tahun 1855. "
         Mbah "Dah paham?"
+        hide mbah_normal
+        show senyum at left
         Suma "(Mengangguk) Yup!"
+        hide senyum
         jump scene8
 
 label scene8:
+    show mbah_senyum at left
     Mbah "Sudah pernah lihat lukisannya yang di gambar Raden Saleh belum?"
+    hide mbah_senyum
+    show senyum at left
     Suma "Belummm"
+    hide senyum
     centered "(Lalu mbah Seno pergi ke dalam dan mengambil gambaran kecil)"
     centered "(Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma)"
     centered "(Walaupun hanya duplikat, tapi masih tetap mirip)"
