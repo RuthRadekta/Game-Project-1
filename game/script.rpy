@@ -8,11 +8,10 @@ define Suma = Character('Suma', color="#508D69")
 define Stefan = Character('Stefan', color="#F3B664")
 define Mbah = Character('Mbah', color="#872341")
 define Kakek = Character('Kakek')
-define Pemberita = Character('Pemberita', color="#a5c951")
 
 define Soekarno = Character('Soekarno', color="#0d1a73")
 define Hatta = Character('Hatta', color="#373e6e")
-define Radio = Character ('Radio', color="#030303")
+define Pemberita = Character ('Radio', color="#000000")
 define Massa = Character('Massa', color="#030303")
 define Syahrir = Character('Syahrir', color="#4a0202")
 
@@ -56,9 +55,9 @@ label scene1:
     scene kelas sekarang
     #play suara riuh di kelas
     play sound "audio/sound_riuh.ogg" loop
-    centered "{color=#FFFFFF}(Suara riuh di kelas){/color}"
-    centered '{color=#FFF5C2}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
-    centered '{color=#FFF5C2}"Besok banget tuh"{/color}'
+    centered "(Suara riuh di kelas)"
+    centered '{color=#f26835}"Eh kata Pak Retno ulangan sejarah kapan?"{/color}'
+    centered '{color=#f26835}"Besok banget tuh"{/color}'
     show kusuma_kaget at left
     Suma "Huh?"
     Suma "(Menghela napas)"
@@ -96,7 +95,7 @@ label scene4:
     show normal at left
     Suma "Loh? (Melihat sekitar) "
     extend "Kamar siapa ini? "
-    centered '"Le, ijek durung tangi to?"'
+    centered '{color=#FFFFFF}"Le, ijek durung tangi to?"{/color}'
     hide normal
     show kaget at left
     Suma "(Mendengar sesuatu) Huh? "
@@ -104,16 +103,16 @@ label scene4:
     Suma "Siapa?! Ayah ya? "
     extend "Tapi kok berat gitu... "
     play sound "audio/squeaky-door.mp3"
-    centered "(Mbah Seno masuk ke kamar Suma dan berkacak pinggang)"
+    centered "{color=#FFFFFF}(Mbah Seno masuk ke kamar Suma dan berkacak pinggang){/color}"
     play sound "audio/foot-steps.mp3" volume 6.0
     hide kaget
     show mbah_normal at left
     Mbah "Le, le... turu teros! (Berjalan mendekati Suma)"
     hide mbah_normal
     show kaget at left
-    Suma "(Membatin) Huh? "
-    extend "Mbah Seno! "
-    extend "Kok hidup lagi?! "
+    Suma "(Membatin) {i}Huh?{/i} "
+    extend "{i}Mbah Seno! {/i}"
+    extend "{i}Kok hidup lagi?! {/i}"
     stop sound
     stop music
 
@@ -137,7 +136,7 @@ label scene5:
     
     scene halaman rumah old
     with fade
-    centered "(Suma sampai halaman depan)"
+    centered "{color=#FFFFFF}(Suma sampai halaman depan){/color}"
     
     #centered "(EDIT)entar nunjukin mbah seno yg berdiri dengan caping kepala dan bbrp peralatan berkebun"
     show mbah_normal at left
@@ -178,7 +177,7 @@ label scene5:
     show normal at left
     Suma "(Menceritakan semua yang telah terjadi)"
     hide normal
-    centered "..."
+    centered "{color=#FFFFFF}...{/color}"
     with fade
     show mbah_senyum at left
     Mbah "(Tertawa kecil) "
@@ -214,8 +213,8 @@ label scene6:
 
     centered " "
     with fade
-    centered "(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda)"
-    centered "(Suma mendengarkan dengan penuh perhatian)"
+    centered "{color=#FFFFFF}(Selama mereka bekerja, Mbah Seno menceritakan kisah-kisah tentang masa lalu bagaimana Belanda datang ke Indonesia dan perjuangan rakyat Indonesia saat melawan penjajahan Belanda){/color}"
+    centered "{color=#FFFFFF}(Suma mendengarkan dengan penuh perhatian){/color}"
 
     show mbah_normal at left
     Mbah "Pie, Le? Wes paham?"
@@ -246,8 +245,8 @@ label scene7:
     stop music
     centered " "
     with fade
-    centered "(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno)"
-    centered "(Selain itu, mereka mulai akrab layaknya keluarga)"
+    centered "{color=#FFFFFF}(Setelah beberapa jam bekerja di sawah, Suma paham apa yang dimaksud Mbah Seno){/color}"
+    centered "{color=#FFFFFF}(Selain itu, mereka mulai akrab layaknya keluarga){/color}"
     with fade
     
     play music "audio/afternoon.mp3" volume 2.0
@@ -273,7 +272,7 @@ label scene7:
     Mbah "(Tersenyum kembali)" 
     Mbah "Yowes, le. Ayo bali. Kita masih punya banyak yang harus kau pelajari."  
     hide mbah_senyum
-    centered "(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini)"
+    centered "{color=#FFFFFF}(Mereka berdua meninggalkan sawah dan kembali ke rumah yang jauh berbeda dari rumah Suma di masa kini){/color}"
     
     scene halaman rumah old
     with fade
@@ -377,10 +376,12 @@ label scene8:
     show senyum at left
     Suma "Belummm"
     hide senyum
-    centered "(Lalu mbah Seno pergi ke dalam dan mengambil gambaran kecil)"
-    centered "(Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma)"
-    centered "(Walaupun hanya duplikat, tapi masih tetap mirip)"
-
+    centered "{color=#FFFFFF}(Lalu mbah Seno pergi ke dalam dan mengambil gambaran kecil){/color}"
+    centered "{color=#FFFFFF}(Beberapa menit kemudian, mbah Seno kembali dan menunjukkan gambaran itu kepada Suma){/color}"
+    show diponegoro1
+    centered " "
+    centered "{color=#FFFFFF}(Walaupun hanya duplikat, tapi masih tetap mirip){/color}"
+    hide diponegoro1
     # nah ini nunjukin gambarnya raden saleh
 
     stop music
@@ -493,16 +494,16 @@ label scene8:
 
 
 ############ CHAPTER 02 ####################
-stop music
 
 label scene9:
     centered "Next!"
+    play music "audio/curious.mp3"
     scene fadeout 3.0
     scene ruang tengah dulu
     with fade
 
-    centered "Keesokkan harinya, Suma sedang berjalan di ruang tengah dan tidak sengaja menemukan sebuah buku terbuka yang tidak terlalu tebal."
-    centered "Dikarenakan penasaran, dia mengambil buku tersebut dan membacanya."
+    centered "{color=#FFFFFF}Keesokkan harinya, Suma sedang berjalan di ruang tengah dan tidak sengaja menemukan sebuah buku terbuka yang tidak terlalu tebal.{/color}"
+    centered "{color=#FFFFFF}Dikarenakan penasaran, dia mengambil buku tersebut dan membacanya.{/color}"
     
     #nampilin bersatu kita teguh...
 
@@ -603,7 +604,7 @@ label scene9:
 label scene10:
     hide mbah_senyum
 
-    centered "(Setelah itu, Suma berpamitan untuk pergi ke sekolah karena ia mau tidak mau harus tetap pergi ke sekolah di zaman ini, walaupun harus tetap berpura-pura menjadi kakeknya)"
+    centered "{color=#FFFFFF}(Setelah itu, Suma berpamitan untuk pergi ke sekolah karena ia mau tidak mau harus tetap pergi ke sekolah di zaman ini, walaupun harus tetap berpura-pura menjadi kakeknya){/color}"
     scene fadeout 1.0
 
     # nanti muncul info ndek tengah
@@ -613,7 +614,7 @@ label scene10:
     with fade
     show normal at left
     Suma "(Melihat sekitar) "
-    extend "kok bule semua ya? cowo semua lagi (batinnya)"
+    extend "{i}Kok bule semua ya? cowo semua lagi {/i} (batinnya)"
 
     centered "..."
 
@@ -621,7 +622,7 @@ label scene10:
 
     # Pertemuan dengan Stefan
     hide normal
-    centered '"Hey!"'
+    centered '{color=#000000}"Hey!"{/color}'
 
     show kaget at left
     Suma "(Kaget, karena bahunya ditepuk)"
@@ -651,8 +652,8 @@ label scene10:
     extend "Karena kau pintar."
     hide stefan_senyum
     show normal at left
-    Suma "Tumben ada yang minta ajar ke gue (batinnya)"
-    Suma "(Berdeham)"
+    Suma "{i}Tumben ada yang minta ajar ke gue{/i} (batinnya)"
+    Suma "(Berdeham) "
     extend "Gak mau (gengsi)"
     hide normal
     show stefan_pout at left
@@ -663,9 +664,9 @@ label scene10:
     Suma "(Mendesah kesal karena ia hampir saja lupa bahwa dia berada dalam tubuh kakeknya yang ramah)"
     Suma "Gue bahkan ga kenal lo. Sokap banget."
     hide normal
-    centered "(Suma melirik ke arah lain. Dia tahu bahwa orang Belanda itu tidak mengerti ejekkannya, jadi dia bisa bebas menggunakan kosakata gaul di zamannya.)"
+    centered "{color=#000000}(Suma melirik ke arah lain. Dia tahu bahwa orang Belanda itu tidak mengerti ejekkannya, jadi dia bisa bebas menggunakan kosakata gaul di zamannya){/color}"
     show stefan_senyum at left
-    Stefan "Maksudmu?"
+    Stefan "Maksudmu? "
     extend "(menatap bingung)"
     hide stefan_senyum
     show normal at left
@@ -686,20 +687,23 @@ label scene10:
     extend "ini tidak gratis"
     hide normal
     show stefan_senyum at left
-    Stefan "(Mengangguk)"
+    Stefan "(Mengangguk) "
     extend "Ya, aku akan membayar"
     hide stefan_senyum
     show normal at left
-    Suma "Uang? Mungkin ini gak begitu buruk (batinnya)"
+    Suma "{i}Uang? Mungkin ini gak begitu buruk{/i} (batinnya)"
     hide normal
     centered " "
 
 label scene11:
     with fade
-    centered "(Sebelum pulang sekolah, Suma sedang melihat-lihat sekitar di kelas ini karena rasa kagumnya belum sirna)"
-    centered "Salah satu benda yang menarik perhatiannya adalah sebuah pajangan kata-kata yang berfigurakan kayu"
+    centered "{color=#000000}(Sebelum pulang sekolah, Suma sedang melihat-lihat sekitar di kelas ini karena rasa kagumnya belum sirna){/color}"
+    centered "{color=#000000}Salah satu benda yang menarik perhatiannya adalah sebuah pajangan kata-kata yang berfigurakan kayu{/color}"
 
     # nampilin pajangan itu
+    show kihadjar
+    centered " "
+    hide kihadjar
 
     show normal at left
     Suma "(Memahami kata-kata tersebut) "
@@ -740,18 +744,18 @@ label scene11:
     show normal at left
     Suma "Oh. Ya sudah. Thanks."
     hide normal
-    centered "(Suma mulai berjalan dari kelas untuk pulang dan diikuti oleh Stefan)"
+    centered "{color=#000000}(Suma mulai berjalan dari kelas untuk pulang dan diikuti oleh Stefan){/color}"
     scene fadeout
 
 label scene12:
     scene ruang tengah stefan_1
     with fade
-    centered "(Mereka tiba di rumah Stefan)"
+    centered "{color=#FFFFFF}(Mereka tiba di rumah Stefan){/color}"
 
     # nampilin rumah stefan view dari luar
     # terus nampilin ruang tengah rumah stefan
 
-    centered "(Mereka duduk di ruang tengah rumah Stefan)"
+    centered "{color=#FFFFFF}(Mereka duduk di ruang tengah rumah Stefan){/color}"
     show normal at left
     Suma "(Mengeluarkan buku matematikanya yang cukup tebal)"
     hide normal
@@ -771,7 +775,7 @@ label scene12:
     Stefan "(Mengangguk) Buku tebal, terlihat menarik"
     hide stefan_senyum
     show senyum at left
-    Suma "Lah, gue kira gue aneh sendiri (batinnya)"
+    Suma "{i}Lah, gue kira gue aneh sendiri{/i} (batinnya)"
     hide senyum
     show stefan_normal at left
     Stefan "Kenapa senyum?"
@@ -784,7 +788,7 @@ label scene12:
     hide stefan_normal
 
     centered " "
-    centered "(Mereka mulai belajar dengan Suma yang menjadi tutor)"
+    centered "{color=#FFFFFF}(Mereka mulai belajar dengan Suma yang menjadi tutor){/color}"
     with fade
 
     show normal at left
@@ -807,34 +811,38 @@ label scene12:
     hide stefan_giggle
     show kaget at left
     Suma "... "
-    extend "bjir (batinnya)"
+    extend "{i}bjir{/i} (batinnya)"
     hide kaget
 
     centered " "
     with fade
-    centered "(Kemudian Stefan menceritakan tentang keluarganya)"
-    centered "(Ayahnya yang bekerja sebagai pegawai pemerintah Belanda dan menikah dengan ibunya yang merupakan seorang wanita cantik dari Indonesia)"
-    centered "(Dia juga mengungkapkan bahwa dia adalah anggota keluarga yang beruntung karena bisa mendapatkan pendidikan yang baik)"
+    centered "{color=#FFFFFF}(Kemudian Stefan menceritakan tentang keluarganya){/color}"
+    centered "{color=#FFFFFF}(Ayahnya yang bekerja sebagai pegawai pemerintah Belanda dan menikah dengan ibunya yang merupakan seorang wanita cantik dari Indonesia){/color}"
+    centered "{color=#FFFFFF}(Dia juga mengungkapkan bahwa dia adalah anggota keluarga yang beruntung karena bisa mendapatkan pendidikan yang baik){/color}"
 
     show normal at left
     Suma "(Mengangguk paham)"
     hide normal
 
-    centered "(Saat mereka berbicara, orang tua Stefan, yaitu Nyonya Driessen dan Tuan Driessen, masuk ke dalam ruang keluarga."
-    centered "Mereka adalah orang Belanda yang tinggal di Indonesia, dan mereka terlihat ramah kepada Suma. Meskipun ada bahasa dan budaya yang berbeda, mereka mencoba berkomunikasi dengan Suma dan mengenalkan diri mereka.  )"
-    centered "(Sejak saat itu, Suma dan Stefan mulai akrab satu sama lain)"
+    centered "{color=#FFFFFF}(Saat mereka berbicara, orang tua Stefan, yaitu Nyonya Driessen dan Tuan Driessen, masuk ke dalam ruang keluarga){/color}"
+    centered "{color=#FFFFFF}(Mereka adalah orang Belanda yang tinggal di Indonesia, dan mereka terlihat ramah kepada Suma. Meskipun ada bahasa dan budaya yang berbeda, mereka mencoba berkomunikasi dengan Suma dan mengenalkan diri mereka) {/color}"
+    centered "{color=#FFFFFF}(Sejak saat itu, Suma dan Stefan mulai akrab satu sama lain){/color}"
     centered " "
 
 label scene13:
     with fade
-    centered "(Suatu hari, saat Suma selesai mengajari Stefan Pelajaran matematika seperti biasa, ia mendengar suara orang mengobrol dari arah pintu masuk)"
+    stop music
+
+    #play musik lagi apa ya
+    play music "audio/funky.mp3"
+    centered "{color=#FFFFFF}(Suatu hari, saat Suma selesai mengajari Stefan Pelajaran matematika seperti biasa, ia mendengar suara orang mengobrol dari arah pintu masuk){/color}"
 
     # janlup sfx
     # nampilin pintu terbuka, perabotan kayu jati
     # ada suara berbincang dan tawa
 
-    centered "(Hari ini adalah hari di mana Tuan Driessen menjadi tuan rumah dalam pertemuan untuk berdiskusi tentang perjuangan kemerdekaan)"
-    centered "(Suma dan Stefan bersemangat karena Ayah Stefan bilang Soekarno dan tokoh-tokoh pejuang kemerdekaan lainnya akan datang)"
+    centered "{color=#FFFFFF}(Hari ini adalah hari di mana Tuan Driessen menjadi tuan rumah dalam pertemuan untuk berdiskusi tentang perjuangan kemerdekaan){/color}"
+    centered "{color=#FFFFFF}(Suma dan Stefan bersemangat karena Ayah Stefan bilang Soekarno dan tokoh-tokoh pejuang kemerdekaan lainnya akan datang){/color}"
 
     show kaget at left
     Suma "What? Soekarno?!"
@@ -859,14 +867,14 @@ label scene13:
 
     centered " "
     with fade
-    centered "(Acara itupun dimulai)"
-    centered "(Selama di sekolah Suma tidak pernah membayangkan orasi dari Soekarno bisa sekeren ini. Teks-teks dan gambar burik di buku paket sejarahnya tidak bisa menyalurkan kekerenan ini dengan baik. )"
+    centered "{color=#FFFFFF}(Acara itupun dimulai){/color}"
+    centered "{color=#FFFFFF}(Selama di sekolah Suma tidak pernah membayangkan orasi dari Soekarno bisa sekeren ini. Teks-teks dan gambar burik di buku paket sejarahnya tidak bisa menyalurkan kekerenan ini dengan baik){/color}"
 
     show senyum at left
-    Suma "Ternyata disaksikan secara langsung public speaking Pak Soekarno keren juga (batinnya)"
+    Suma "{i}Ternyata disaksikan secara langsung public speaking Pak Soekarno keren juga{/i} (batinnya)"
     hide senyum
 
-    centered "(Sesaat kemudian seseorang datang menyusul ke ruangan ini)"
+    centered "{color=#FFFFFF}(Sesaat kemudian seseorang datang menyusul ke ruangan ini){/color}"
 
     show kaget at left
     Suma "Itu Mohammad Hatta! Hatta woi! (sambil mengguncang bahu Stefan, saking senangnya)"
@@ -887,7 +895,7 @@ label scene13:
     Suma "(Suma menepuk dahinya keras-keras. Dia lupa kalau sedang ada di lain zaman dan fakta bahwa Stefan ini tidak tahu menahu tentang para pahlawan revolusi)"
     hide normal
 
-    centered "(Acara berlanjut dengan lancar)"
+    centered "{color=#FFFFFF}(Acara berlanjut dengan lancar){/color}"
     centered "..."
     scene fadeout 1.0
 
@@ -923,136 +931,159 @@ label scene13:
             "Seorang pemimpin harus mampu meneladani dan memberi semangat meskipun di tengah kesibukannya":
                 play sound "audio/klik.mp3"
                 $ nilai += 5
-                jump scene20
+                jump scene14
             "Menjadi seorang pemimpin harus mampu memberikan suri tauladan":
                 play sound "audio/klik.mp3"
                 $ nilai += 2
-                jump scene20
+                jump scene14
             "Seseorang ditengah kesibukannya harus juga mampu membangkitkan atau menggugah semangat":
                 play sound "audio/klik.mp3"
                 $ nilai += 2
-                jump scene20
+                jump scene14
             "Lupa":
                 play sound "audio/klik.mp3"
                 $ nilai += 2
-                jump scene20
-
+                jump scene14
 
 ################# CHAPTER 03 ##########################
 
+
 label scene14:
-    centered "(Siang itu Suma memasuki ruang tengah dengan menggaruk tengkuknya. Mbah Seno sedang sibuk dengan sesuatu yang membuatnya penasaran.)"
-
-    show normal at left
-    Suma "(Menengok mbah seno yang sedang mengutak-atik sebuah barang)"
-    extend "“Sedang apa mbah?”"
-    hide normal
-    show mbah_normal at left
-    Mbah "(tidak menjawab dan malah memukul benda itu)"
-    hide mbah_normal
-
-    centered "“Duak!!”"
-
-    show kaget at left
-    Suma "(Kaget)"
-    extend " “Lho lho lho santai mbah”"
-    hide kaget
-    show mbah_normal at left
-    Mbah "“Santai mu iku, ki lho delengen”"
-    extend "(menunjuk benda itu yang tiba-tiba mengeluarkan suara)"
-    hide mbah_normal
-    show normal at left
-    Suma "“Wuah”"
-    extend " “Ini apa mbah?”"
-    hide normal
-    show mbah_senyum at left
-    Mbah "“Radio ini, tadi mbah dapat murah dari juragan barang bekas. "
-    extend "Bagus tho?”"
-    hide mbah_senyum
-    show normal at left
-    Suma "(“Masih bagusan televisi di zamanku mbah” batin suma)"
-    hide normal
-
-    centered "(Mbah Seno meletakkan Radio yang bersuara krusak-krusak itu di meja dan memutar tuner hingga radio mencapai siaran jernih)"
-
-    show mbah_senyum at left
-    Mbah "“Wes kene le ayo lungguh mirengne penyiar e”"
-    hide mbah_senyum
-    show normal at left
-    Suma "(tidak begitu paham arti kalimatnya tapi dia mengikuti mbah seno duduk.)"
-    hide normal
-
-    centered "(Sementara itu saluran radio selesai beriklan dan memasuki sebuah acara berita)"
-
-    show radio at left
-    Pemberita "“Selamat datang kembali, sahabat Radio Merdeka, di episode spesial kita yang memori perjalanan panjang menuju kemerdekaan Indonesia. Saya, Ruswandi, akan mengajak Anda mengenang momen-momen bersejarah kita pada rentang waktu 1942 hingga kini. Tanpa menunggu lebih lama, mari kita mulai.”"
-    Pemberita "“Di awal masa pendudukan Jepang pada tahun 1942, tanah air ini menjadi saksi bisu dari perubahan besar. Dengan berat hati, kita memasuki era pendudukan yang membawa berbagai perubahan. Begitu pula peristiwa pertama yang ingin saya kenang...”"
-    Pemberita "“Tahun 1942, bendera matahari terbit berkibar di bumi Indonesia. Pendudukan Jepang memasuki babak baru dalam sejarah kita. Meskipun hadir dengan tantangan dan perubahan, periode ini juga menjadi waktu di mana semangat perlawanan mulai tumbuh di hati pejuang kemerdekaan. Pergolakan batin yang menjadi benih dari perubahan besar yang akan datang.”"
-    Pemberita "“Dan di tengah rentang waktu yang sulit itu, kita bergerak maju menuju momen berikutnya yang menjadi batu loncatan untuk meraih kemerdekaan kita.”"
-    Pemberita "“Tanggal 29 Mei 1945, di tengah kekhawatiran dan harapan, badan penyelidik kita, BPUPKI, resmi dibentuk. Para tokoh bangsa berkumpul untuk menentukan arah perjalanan kita. Di sinilah semangat kemerdekaan mulai diukir dalam dokumen dan pidato. Ideologi yang kelak akan menggerakkan bangsa kita menuju kemerdekaan, Pancasila, muncul dari perdebatan yang sengit namun penuh semangat.”"
-    Pemberita "“Dalam suara merdu dan kata-kata bijak, pada tanggal 1 Juni 1945, di dalam ruang sidang BPUPKI, Indonesia melahirkan ideologi yang akan menjadi pilar kekuatan dan persatuan bagi seluruh rakyat. Inilah momen ketiga dalam perjalanan panjang kita menuju kemerdekaan: Pancasila sebagai Dasar Negara”"
-    Pemberita "“Gambar ini membawa kita kembali ke saat-saat di mana Dr. Soekarno dan Mohammad Hatta dengan gagah berani menyatukan pemikiran dan idealisme dalam konsep Pancasila. Lima sila yang mendasari negara kita: Ketuhanan Yang Maha Esa, kemanusiaan yang adil dan beradab, persatuan Indonesia, kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan dan perwakilan, dan keadilan sosial bagi seluruh rakyat Indonesia”"
-
-    #iki apik e dikasih cuplikan rekaman pidato Soekarno di sidang BPUPKI gak?
-
-    Pemberita "“Inilah landasan moral dan spiritual yang mengikat kita sebagai bangsa. Pancasila bukanlah sekadar kata-kata, tetapi pilar yang memandu perjalanan kita menuju kemerdekaan sejati.”"
-    Pemberita "“Dan tak lama setelah itu, datang momen puncak yang membahagiakan hati setiap anak bangsa. Pada tanggal 17 Agustus 1945, detik-detik yang penuh semangat dan harapan, Soekarno dan Hatta, dengan tekad yang bulat, menyatakan kemerdekaan Indonesia di depan rumah mereka yang sederhana.”"
-    Pemberita "“Hari itu, bukan hanya sebuah deklarasi, tapi sebuah janji untuk hidup dalam kemerdekaan, sebuah janji untuk menjadi bangsa yang besar. Bendera merah putih berkibar, menyala, memancarkan semangat perjuangan yang akan menjadi cahaya bagi generasi-generasi mendatang”"
-    Pemberita "“Sekarang, mari kita lanjutkan perjalanan kita melalui dua momen yang sangat berarti dalam sejarah kita, saat-saat yang membentuk jati diri bangsa ini. Setelah kemerdekaan diumumkan pada tanggal 17 Agustus 1945, Indonesia menghadapi ujian besar dalam wujud Pertempuran Lima Hari di Surabaya.”"
-    Pemberita "“Pada Oktober-November 1945, kota pahlawan Surabaya menjadi saksi dari semangat perjuangan yang melibatkan pasukan pemuda dan tentara Indonesia melawan pasukan Inggris yang baru tiba. Pertempuran Lima Hari ini bukan hanya tentang menentang kehadiran asing, tetapi juga merupakan bentuk perlawanan terhadap kolonialisme yang telah lama menghimpit.”"
-    Pemberita "“Saat-saat itu mengajarkan kita tentang keberanian, persatuan, dan pengorbanan. Pemuda Indonesia bersatu, melupakan perbedaan dan bersatu untuk membela tanah air. Pertempuran ini mungkin membawa duka, tetapi juga menjadi tonggak sejarah yang membuktikan bahwa semangat kemerdekaan mengalir deras di setiap pembuluh darah bangsa ini.”"
-    Pemberita "“Namun, pertempuran ini hanyalah bab dalam buku sejarah panjang kita. Seiring waktu berlalu, perjuangan ini terus berlanjut. Dan di panggung dunia, perjuangan diplomatik pun tak kalah pentingnya.”"
-    Pemberita "“Desember 1945, dunia melihat pengakuan internasional terhadap kedaulatan Indonesia. Konferensi Tingkat Tinggi PBB di San Francisco menyaksikan langkah awal Indonesia sebagai negara merdeka yang diakui oleh dunia internasional. Belanda, dengan segala pasrah, setuju untuk mengakui kemerdekaan Indonesia melalui Kesepakatan Linggarjati dan Persetujuan Renville.”"
-    Pemberita "“Pengakuan ini bukan hanya sekadar tinta di atas kertas, melainkan simbol dari perjuangan dan pengorbanan yang telah dilakukan oleh generasi sebelum kita. Ini adalah hasil dari kesatuan dan tekad kita sebagai bangsa, serta bukti bahwa kemerdekaan bukanlah impian kosong.”"
-    Pemberita "“Maka, pada saat yang tepat ini, mari kita bangkitkan semangat kita, merayakan kemenangan dalam perjuangan panjang kita menuju kemerdekaan. Pancasila dan Proklamasi Kemerdekaan, dua pilar yang kokoh, membimbing kita menuju masa depan yang lebih baik. Terima kasih telah menyaksikan, dan bersama-sama kita lanjutkan perjalanan melihat lebih banyak kisah heroik dalam sejarah kemerdekaan kita. Sampai jumpa di episode berikutnya.” "
-    hide radio
-
-
-############### CHAPTER 04 ################
-
-label scene20:
+    stop music
     scene fadeout 1.0
     scene ruang tengah dulu
     with fade
-    centered "Kami bangsa Indonesia..."
+
+    play music "audio/indonesia_raya.mp3"
+    centered "{color=#FFFFFF}Kami bangsa Indonesia...{/color}"
     # play bgm indonesia raya
     # ini radionya latarnya di rumah Stefan
 
     show normal at left
     Suma "Huh?"
-
-    Radio "... diselenggarakan dengan tjara seksama..."
-    Radio "Disoearakan oleh Soekarno di Djalan Pengangsaan Timoer 56."
-    extend "Djakarta, hari 17 boelan 8 tahoen 5"
-
+    
+    Pemberita "... diselenggarakan dengan tjara seksama..."
+    Pemberita "Disoearakan oleh Soekarno di Djalan Pengangsaan Timoer 56."
+    extend " Djakarta, hari 17 boelan 8 tahoen 5"
     hide normal
+
     show senyum at left
     Suma "Yes! Akhirnya merdeka!"
     hide senyum
     show stefan_giggle at left
-    Stefan "Benar! Merdeka!"
+    Stefan "Benar! Merdeka! "
     extend "(Tertawa bersama Suma)"
     hide stefan_giggle
     centered " "
+    stop music
     scene fadeout 1.0
-    with fade
-
     #nanti dikasih fade out ya buat nutup scenenya
 
-    centered "(Beberapa bulan kemudian, Agresi Militer Belanda I terjadi)"
-    centered "(Hal ini dikarenakan Belanda menolak mengakui kemerdekaan Indonesia dan memutuskan untuk melancarkan serangan militer)"
-    centered "(Inilah yang disebut sebagai Masa Bersiap)"
-    centered "(Selama Masa Bersiap, Indonesia terus berusaha mempertahankan kemerdekaannya dan mempersiapkan diri untuk menghadapi serangan militer lebih lanjut)"
-    centered "(Masa Bersiap juga mencakup upaya diplomatik untuk memperoleh pengakuan internasional atas kemerdekaan Indonesia)"
-    centered "(Bahkan pertempuran hebat terjadi di kota Surabaya karena ketidaksetujuan Masyarakat terhadapat datangnya sekutu yang merupakan aliansi dari Belanda)"
-    # dikasi sticky notenya bung tomo
+label scene15:
+    play music "audio/chord.mp3" volume 2.0
+    scene ruang tengah dulu 
+    with fade
+    centered "{color=#FFFFFF}(Siang itu Suma memasuki ruang tengah dengan menggaruk tengkuknya. Mbah Seno sedang sibuk dengan sesuatu yang membuatnya penasaran){/color}"
+
+    show normal at left
+    Suma "(Menengok mbah seno yang sedang mengutak-atik sebuah barang) "
+    extend "Sedang apa mbah?"
+    hide normal
+    show mbah_normal at left
+    Mbah "(tidak menjawab dan malah memukul benda itu)"
+    hide mbah_normal
+
+    play sound "audio/hit.mp3" volume 1.0
+    centered "{color=#FFFFFF}Duak!!{/color}"
+
+    show kaget at left
+    Suma "(Kaget)"
+    extend " Lho lho lho santai mbah"
+    hide kaget
+    show mbah_normal at left
+    play sound "audio/tuning-radio.mp3" volume 1.0 loop 
+    Mbah "Santai mu iku, ki lho delengen "
+    extend "(Menunjuk benda itu yang tiba-tiba mengeluarkan suara)"
+    hide mbah_normal
+    show normal at left
+    Suma "Wuah..."
+    extend " Ini apa mbah?"
+    hide normal
+    show mbah_senyum at left
+    Mbah "Radio ini, tadi mbah dapat murah dari juragan barang bekas. "
+    extend "Bagus to?"
+    hide mbah_senyum
+    show normal at left
+    Suma "{i}Masih bagusan televisi di zamanku mbah{/i} (batinnya)"
+    hide normal
+
+    stop sound
+    centered "{color=#FFFFFF}(Mbah Seno meletakkan Radio yang bersuara krusak-krusak itu di meja dan memutar tuner hingga radio mencapai siaran jernih){/color}"
+
+    show mbah_senyum at left
+    Mbah "Wes kene le ayo lungguh mirengne penyiar e"
+    hide mbah_senyum
+    show normal at left
+    Suma "(tidak begitu paham arti kalimatnya tapi dia mengikuti mbah seno duduk)"
+    hide normal
+
+    play sound "audio/record.mp3" volume 1.0 loop
+    centered "{color=#FFFFFF}(Sementara itu saluran radio selesai beriklan dan memasuki sebuah acara berita){/color}"
+
+    show radio-2 at left
+    Pemberita "Selamat datang kembali, sahabat Radio Merdeka, di episode spesial kita yang memori perjalanan panjang menuju kemerdekaan Indonesia. Saya, Ruswandi, akan mengajak Anda mengenang momen-momen bersejarah kita pada rentang waktu 1942 hingga kini. Tanpa menunggu lebih lama, mari kita mulai."
+    Pemberita "Di awal masa pendudukan Jepang pada tahun 1942, tanah air ini menjadi saksi bisu dari perubahan besar. Dengan berat hati, kita memasuki era pendudukan yang membawa berbagai perubahan. Begitu pula peristiwa pertama yang ingin saya kenang..."
+    Pemberita "Tahun 1942, bendera matahari terbit berkibar di bumi Indonesia. Pendudukan Jepang memasuki babak baru dalam sejarah kita. Meskipun hadir dengan tantangan dan perubahan, periode ini juga menjadi waktu di mana semangat perlawanan mulai tumbuh di hati pejuang kemerdekaan. Pergolakan batin yang menjadi benih dari perubahan besar yang akan datang."
+    Pemberita "Dan di tengah rentang waktu yang sulit itu, kita bergerak maju menuju momen berikutnya yang menjadi batu loncatan untuk meraih kemerdekaan kita."
+    Pemberita "Tanggal 29 Mei 1945, di tengah kekhawatiran dan harapan, badan penyelidik kita, BPUPKI, resmi dibentuk. Para tokoh bangsa berkumpul untuk menentukan arah perjalanan kita. Di sinilah semangat kemerdekaan mulai diukir dalam dokumen dan pidato. Ideologi yang kelak akan menggerakkan bangsa kita menuju kemerdekaan, Pancasila, muncul dari perdebatan yang sengit namun penuh semangat."
+    Pemberita "Dalam suara merdu dan kata-kata bijak, pada tanggal 1 Juni 1945, di dalam ruang sidang BPUPKI, Indonesia melahirkan ideologi yang akan menjadi pilar kekuatan dan persatuan bagi seluruh rakyat. Inilah momen ketiga dalam perjalanan panjang kita menuju kemerdekaan: Pancasila sebagai Dasar Negara"
+    #Pemberita "Gambar ini membawa kita kembali ke saat-saat di mana Dr. Soekarno dan Mohammad Hatta dengan gagah berani menyatukan pemikiran dan idealisme dalam konsep Pancasila. "
+    Pemberita "Lima sila yang mendasari negara kita: Ketuhanan Yang Maha Esa, kemanusiaan yang adil dan beradab, persatuan Indonesia, kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan dan perwakilan, dan keadilan sosial bagi seluruh rakyat Indonesia."
+
+    Pemberita "Inilah landasan moral dan spiritual yang mengikat kita sebagai bangsa. Pancasila bukanlah sekadar kata-kata, tetapi pilar yang memandu perjalanan kita menuju kemerdekaan sejati."
+    Pemberita "Dan tak lama setelah itu, datang momen puncak yang membahagiakan hati setiap anak bangsa. Pada tanggal 17 Agustus 1945, detik-detik yang penuh semangat dan harapan, Soekarno dan Hatta, dengan tekad yang bulat, menyatakan kemerdekaan Indonesia di depan rumah mereka yang sederhana."
+    Pemberita "Hari itu, bukan hanya sebuah deklarasi, tapi sebuah janji untuk hidup dalam kemerdekaan, sebuah janji untuk menjadi bangsa yang besar. Bendera merah putih berkibar, menyala, memancarkan semangat perjuangan yang akan menjadi cahaya bagi generasi-generasi mendatang."
+    Pemberita "Sekarang, mari kita lanjutkan perjalanan kita melalui dua momen yang sangat berarti dalam sejarah kita, saat-saat yang membentuk jati diri bangsa ini. Setelah kemerdekaan diumumkan pada tanggal 17 Agustus 1945, Indonesia menghadapi ujian besar dalam wujud Pertempuran Lima Hari di Surabaya."
+    
+    show bungtomo
+    centered " "
+    hide bungtomo
+
+    Pemberita "Pada Oktober-November 1945, kota pahlawan Surabaya menjadi saksi dari semangat perjuangan yang melibatkan pasukan pemuda dan tentara Indonesia melawan pasukan Inggris yang baru tiba. Pertempuran Lima Hari ini bukan hanya tentang menentang kehadiran asing, tetapi juga merupakan bentuk perlawanan terhadap kolonialisme yang telah lama menghimpit."
+    Pemberita "Saat-saat itu mengajarkan kita tentang keberanian, persatuan, dan pengorbanan. Pemuda Indonesia bersatu, melupakan perbedaan dan bersatu untuk membela tanah air. Pertempuran ini mungkin membawa duka, tetapi juga menjadi tonggak sejarah yang membuktikan bahwa semangat kemerdekaan mengalir deras di setiap pembuluh darah bangsa ini."
+    Pemberita "Namun, pertempuran ini hanyalah bab dalam buku sejarah panjang kita. Seiring waktu berlalu, perjuangan ini terus berlanjut. Dan di panggung dunia, perjuangan diplomatik pun tak kalah pentingnya."
+    #Pemberita "Desember 1945, dunia melihat pengakuan internasional terhadap kedaulatan Indonesia. Konferensi Tingkat Tinggi PBB di San Francisco menyaksikan langkah awal Indonesia sebagai negara merdeka yang diakui oleh dunia internasional. Belanda, dengan segala pasrah, setuju untuk mengakui kemerdekaan Indonesia melalui Kesepakatan Linggarjati dan Persetujuan Renville."
+    #Pemberita "Pengakuan ini bukan hanya sekadar tinta di atas kertas, melainkan simbol dari perjuangan dan pengorbanan yang telah dilakukan oleh generasi sebelum kita. Ini adalah hasil dari kesatuan dan tekad kita sebagai bangsa, serta bukti bahwa kemerdekaan bukanlah impian kosong."
+    #Pemberita "Maka, pada saat yang tepat ini, mari kita bangkitkan semangat kita, merayakan kemenangan dalam perjuangan panjang kita menuju kemerdekaan. Pancasila dan Proklamasi Kemerdekaan, dua pilar yang kokoh, membimbing kita menuju masa depan yang lebih baik. "
+    hide bungtomo
+    
+    Pemberita "Terima kasih telah menyaksikan, dan bersama-sama kita lanjutkan perjalanan melihat lebih banyak kisah heroik dalam sejarah kemerdekaan kita. Sampai jumpa di episode berikutnya."
+    hide radio-2
+    scene fadeout 1.0
+    stop music
+    stop sound
+
+
+################# CHAPTER 04 ##########################
+
+    scene kamar lama
+    with fade
+    play music "audio/attack-on-the-trolls.mp3"
+    centered "{color=#FFFFFF}(Selama beberapa bulan itu, Agresi Militer Belanda I masih terjadi){/color}"
+    centered "{color=#FFFFFF}(Hal ini dikarenakan Belanda menolak mengakui kemerdekaan Indonesia dan memutuskan untuk melancarkan serangan militer){/color}"
+    centered "{color=#FFFFFF}(Inilah yang disebut sebagai Masa Bersiap){/color}"
+    centered "{color=#FFFFFF}(Selama Masa Bersiap, Indonesia terus berusaha mempertahankan kemerdekaannya dan mempersiapkan diri untuk menghadapi serangan militer lebih lanjut){/color}"
+    #centered "(Masa Bersiap juga mencakup upaya diplomatik untuk memperoleh pengakuan internasional atas kemerdekaan Indonesia)"
+    #centered "(Bahkan pertempuran hebat terjadi di kota Surabaya karena ketidaksetujuan Masyarakat terhadapat datangnya sekutu yang merupakan aliansi dari Belanda)"
+
+    scene fadeout 1.0
 
     scene ruang tengah stefan_1
     with fade
-    centered "(Tiba-tiba, saat Suma yang sedang berbincang di rumah Stefan, sekelompok Masyarakat berbondong-bondong datang dengan membawa celurit, bambu runcing, golok dan satu-dua senjata api seperti pistol serta bender merah-putih)"
-    centered '"Andjing NICA! Pergi!"'
-    centered "(Suma dan Stefan yang berada di ruang tengah langsung beranjak karena merasa kaget. Sekian detik kemudian, suara teriakan dari ibu Stefan terdengar dan seruan dari ayah Stefan berhasil membuat Stefan ketakutan)"
-    centered '"Het huis uit, Stefan!!"'
+    centered "{color=#FFFFFF}(Tiba-tiba, saat Suma yang sedang berbincang di rumah Stefan, sekelompok Masyarakat berbondong-bondong datang dengan membawa celurit, bambu runcing, golok dan satu-dua senjata api seperti pistol serta bender merah-putih){/color}"
+    centered '{color=#872341}"Andjing NICA! Pergi!"{/color}'
+    centered "{color=#FFFFFF}(Suma dan Stefan yang berada di ruang tengah langsung beranjak karena merasa kaget. Sekian detik kemudian, suara teriakan dari ibu Stefan terdengar dan seruan dari ayah Stefan berhasil membuat Stefan ketakutan){/color}"
+    centered '{color=#872341}"Het huis uit, Stefan!!"{/color}'
 
     show kaget at left
     Suma "Kenapa? Apa??!"
@@ -1061,13 +1092,16 @@ label scene20:
     Stefan "Lari!"
     hide stefan_takut
 
-    centered "(Stefan berlari keluar dari rumah melalui pintu belakang dan diikuti oleh Suma)"
-    centered "(Namun, massa berhasil memaksa masuk ke dalam rumah dan menembakkan peluru dua kali ke punggung Stefan. Suma yang kaget melihat Stefan tergeletak pun berhenti dan membantu Stefan)"
-    centered '"Masih ada satu pro-Belanda!"'
+    centered "{color=#FFFFFF}(Stefan berlari keluar dari rumah melalui pintu belakang dan diikuti oleh Suma){/color}"
+    play sound "audio/gun.mp3"
+    centered "({color=#FFFFFF}(Namun, massa berhasil memaksa masuk ke dalam rumah dan menembakkan peluru dua kali ke punggung Stefan. Suma yang kaget melihat Stefan tergeletak pun berhenti dan membantu Stefan){/color}"
+    centered '{color=#872341}"Masih ada satu pro-Belanda!"{/color}'
     show takut at left
     Suma "A-aku bukan. Aku orang Indonesia!"
     hide takut
-    centered "(Tapi sepertinya massa mengabaikan pernyataan Suma. Maka saat salah satu warga mengangkatkan golok ke arah Suma, dia tanpa sadar berteriak dan menutup mata erat karena ketakutan)"
+    centered "{color=#FFFFFF}(Tapi sepertinya massa mengabaikan pernyataan Suma. Maka saat salah satu warga mengangkatkan golok ke arah Suma, dia tanpa sadar berteriak dan menutup mata erat karena ketakutan){/color}"
+    play sound "audio/glitch.mp3"
+    stop music
     # scenenya dikasih fade out agak lama
 
 ##################### CHAPTER 05 #######################
@@ -1077,21 +1111,27 @@ label scene20:
     scene kamar suma
     with fade
 
-    centered "(Suma terbangun di kamarnya. Dia terengah-engah dan menatap sekeliling. Ini kamarnya yang dulu. Dia sudah kembali ke zamannya)"
+    centered "{color=#FFFFFF}(Suma terbangun di kamarnya. Dia terengah-engah dan menatap sekeliling. Ini kamarnya yang dulu. Dia sudah kembali ke zamannya){/color}"
     show kusuma_normal at left
+    play sound "audio/sigh.mp3"
     Suma "(Bernapas lega. Mimpinya tadi terasa seperti nyata)"
     hide kusuma_normal
+
+    play music "audio/goodbye-venice.mp3"
 
     scene fadeout 1.0
     scene ruang tengah now
     with fade
-    centered "(Saat Suma keluar dari kamar untuk pergi mengambil minum di dapur, dia melihat kakeknya (Torasumaji Prasasta) sedang menulis sesuatu di ruang Tengah)"
+    centered "{color=#FFFFFF}(Saat Suma keluar dari kamar untuk pergi mengambil minum di dapur, dia melihat kakeknya (Torasumaji Prasasta) sedang menulis sesuatu di ruang Tengah){/color}"
     show kusuma_normal at left
     Suma "Kakek?"
     hide kusuma_normal
-    centered "(Kakek menoleh, lalu tersenyum. Suma yang penasaran pun berjalan mendekat untuk melihat apa yang ditulis sang kakek)"
+    centered "{color=#FFFFFF}(Kakek menoleh, lalu tersenyum. Suma yang penasaran pun berjalan mendekat untuk melihat apa yang ditulis sang kakek){/color}"
 
     # nanti nampilin tuh tulisan
+    show diary
+    centered " "
+    hide diary
 
     show kusuma_kaget at left
     Suma "(Terkejut)"
@@ -1102,27 +1142,33 @@ label scene20:
     scene fade out 1.0
     scene kamar suma
     with fade
-    centered "(Maka dari itu dia berlari kembali ke kamarnya dan mengambil buku paket sejarahnya. Dikarenakan penasaran, dia mencari-cari kejadian relevan yang terjadi setelah kemerdekaan)"
-    centered "(Tanpa sadar ia mulai belajar)"
+    centered "{color=#FFFFFF}(Maka dari itu dia berlari kembali ke kamarnya dan mengambil buku paket sejarahnya. Dikarenakan penasaran, dia mencari-cari kejadian relevan yang terjadi setelah kemerdekaan){/color}"
+    centered "{color=#FFFFFF}(Tanpa sadar ia mulai belajar){/color}"
 
     # nampilin sticky note materi (ada di script.docx)
+    show materi
+    centered " "
+    hide materi
 
-    centered "Suma mungkin tidak dapat memberikan kontribusi langsung dalam perjuangan Indonesia)"
-    centered "Tapi dia mendapatkan pelajaran berharga tentang arti perjuangan, kemerdekaan, dan tekad yang dibutuhkan untuk mencapai tujuan besar, kemerdekaan Indonesia"
+    centered "{color=#FFFFFF}(Suma mungkin tidak dapat memberikan kontribusi langsung dalam perjuangan Indonesia){/color}"
+    centered "{color=#FFFFFF}(Tapi dia mendapatkan pelajaran berharga tentang arti perjuangan, kemerdekaan, dan tekad yang dibutuhkan untuk mencapai tujuan besar, kemerdekaan Indonesia) {/color}"
 
     # scene di fade out karena ini bakal ganti hari
+    scene fadeout 1.0
+    scene kelas sekarang
+    with fade
 
-    centered "(Keesokkan harinya...)"
+    centered "{color=#FFFFFF}(Keesokkan harinya...){/color}"
 
     #nampilin latar dan bgm kek di sekolah
 
-    centered "(Soal ulangan sejarah dibagikan)"
+    centered "{color=#FFFFFF}(Soal ulangan sejarah dibagikan){/color}"
 
     show kusuma_restface at left
     Suma "(Terkejut) Huh? Sama??"
     hide kusuma_restface
 
-    centered "(Tidak disangka, soal-soal sejarah itu sebagian besar sama persis seperti di mimpi dan apa yang dia tidak sadar pelajari)"
+    centered "{color=#FFFFFF}(Tidak disangka, soal-soal sejarah itu sebagian besar sama persis seperti di mimpi dan apa yang dia tidak sadar pelajari){/color}"
 
     scene fadeout 1.0
     scene bg2
@@ -1131,6 +1177,86 @@ label scene20:
     centered "Pertanyaan!"
 
     # Pertanyaan berdasarkan ch04 dan ch05 = jumlah 6
+    label pertanyaanCH3_1:
+        centered "Di mana dan pada tanggal berapa BPUPKI resmi dibentuk?"
+        menu:
+            "Jakarta, 29 Mei 1945":
+                $ nilai += 2
+                jump pertanyaanCH3_2
+            "Surabaya, 17 Agustus 1945":
+                $ nilai += 2
+                jump pertanyaanCH3_2
+            "Jakarta, 1 Juni 1945":
+                $ nilai += 5
+                jump pertanyaanCH3_2
+            "Surabaya, 29 Mei 1945":
+                $ nilai += 2
+                jump pertanyaanCH3_2
+        
+    label pertanyaanCH3_2:
+        centered "Apa yang diputuskan dalam ruang sidang BPUPKI pada tanggal 1 Juni 1945?"
+        menu:
+            "Proklamasi Kemerdekaan Indonesia":
+                $ nilai += 2
+                jump pertanyaanCH3_3
+            "Pembentukan pertahanan negara":
+                $ nilai += 2
+                jump pertanyaanCH3_3
+            "Penetapan Bendera Merah Putih":
+                $ nilai += 2
+                jump pertanyaanCH3_3
+            "Penyusunan dasar negara Pancasila":
+                $ nilai += 5
+                jump pertanyaanCH3_3
+    
+    label pertanyaanCH3_3:
+        centered "Apa yang ditandai oleh tanggal 17 Agustus 1945 dalam sejarah Indonesia?"
+        menu:
+            "Pembentukan pemerintahan sementara":
+                $ nilai += 2
+                jump pertanyaanCH3_4
+            "Pertempuran Lima Hari di Surabaya":
+                $ nilai += 2
+                jump pertanyaanCH3_4
+            "Pidato Soekarno di BPUPKI":
+                $ nilai += 2
+                jump pertanyaanCH3_4
+            "Proklamasi Kemerdekaan Indonesia":
+                $ nilai += 5
+                jump pertanyaanCH3_4
+
+    label pertanyaanCH3_4:
+        centered "Apa yang menjadi esensi dari Pancasila sebagai Dasar Negara Indonesia?"
+        menu:
+            "Lima sila yang mendasari negara":
+                $ nilai += 5
+                jump pertanyaanCH3_5
+            "Kebebasan politik bagi rakyat":
+                $ nilai += 2
+                jump pertanyaanCH3_5
+            "Keputusan BPUPKI":
+                $ nilai += 2
+                jump pertanyaanCH3_3
+            "Pembentukan pemerintahan sementara":
+                $ nilai += 2
+                jump pertanyaanCH3_3
+
+    label pertanyaanCH3_5:
+        centered "Mengapa Pertempuran Lima Hari di Surabaya dianggap sebagai momen penting dalam sejarah Indonesia?"
+        menu:
+            "Kemenangan mutlak Indonesia atas pasukan Inggris":
+                $ nilai += 2
+                jump pertanyaanCH4_1
+            "Menunjukkan semangat perlawanan terhadap kolonialisme":
+                $ nilai += 5
+                jump pertanyaanCH4_1
+            "Pembuktian bahwa Indonesia siap berperang":
+                $ nilai += 2
+                jump pertanyaanCH4_1
+            "Penetapan Surabaya sebagai kota pahlawan":
+                $ nilai += 2
+                jump pertanyaanCH4_1
+
     label pertanyaanCH4_1:
         centered "Kemerdekaan Indonesia diumumkan pada 17 Agustus 1945 silam. Siapa yang memproklamirkan kemerdekaan Indonesia?"
         menu:
@@ -1254,12 +1380,11 @@ label nilai:
     scene fadeout 1.0
     scene bg1
     with fade
-    centered "{color=#FFFFFF}Nilai ulangan kamu: {color=#a10b0b}[nilai]{/color}{/color}"
+    centered "{color=#FFFFFF}{b}Nilai ulangan kamu: {color=#a10b0b}[nilai]{/color}{/b}{/color}"
 
 #################################################################
 
 label end:
-    with fade
     $renpy.full_restart()
     return
 
